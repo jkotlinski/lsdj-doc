@@ -1,0 +1,95 @@
+\chapter{Synchronization}
+\label{sync-chapter}
+
+LSDj can be synchronized with other devices, so that it is possible to run both in exactly the same tempo. You can activate synchronization by changing the \textsc{sync} mode in the project screen.
+
+\textsc{Important}: To make synchronization work, you should first ensure that your copy/copies of LSDj are set to use a groove based on 6 ticks/step. Otherwise, the resulting speed might be wrong.
+
+\section{Game Boy to Game Boy Sync}
+
+LSDj implements Game Boy to Game Boy sync. This requires two Game Boys, two LSDj cartridges and one Nintendo Game Link cable.
+
+\subsection{Activating Sync}
+
+Make sure that both Game Boys are turned off. Connect the Game Boys using the link cable. Now, turn on the Game Boys, and go to the project screens.
+
+In the project screen, you'll find a \textsc{sync} parameter, which can be adjusted by pressing \textsc{a+left/right}. Set the first Game Boy to \textsc{master} and the second Game Boy to \textsc{slave}. Now, the second Game Boy will receive ticks from the first Game Boy through the link cable, ensuring that they will play at the same tempo.
+
+The sync works in two different ways, depending on whether the sequencer is in live mode or not\ldots
+
+\subsection{Using Sync with Both Carts in Song Play Mode}
+
+Press \textsc{start} on the slave Game Boy. It will display the text \textsc{wait} in the bottom right corner, indicating that it is waiting for tick signals from the master Game Boy. Now, press \textsc{start} on the master Game Boy, and the slave Game Boy will start playing on the same song position as the master Game Boy.
+
+Pressing \textsc{start} again on the master Game Boy will stop both Game Boys, putting the slave Game Boy in \textsc{wait} mode.
+
+\subsection{Using Sync with Both Carts in Live Play Mode}
+
+Both Game Boys are operated as usual, the difference being that they stay synced.
+
+Sync will be lost on one occasion only: when the master Game Boy is stopped, and the slave Game Boy is still playing. Then, stop the slave Game Boy and start again.
+
+\section{\textsc{Midi} Sync}
+
+\textsc{Midi} sync requires a special \textsc{Midi} sync cable for Game Boy. For information on how to build a \textsc{Midi} to Game Boy adapter, please refer to the website at \url{http://www.littlesounddj.com}.
+
+Usage: Plug in the sync device before turning on your Game Boy. Then, set LSDj to \textsc{Midi} slave sync mode. Pressing \textsc{start} will now make LSDj wait for and sync with any incoming \textsc{Midi} clock signals. LSDj should use grooves based on 6 ticks.
+
+\begin{figure}[hbtp]
+\includegraphics[width=1cm]{tip}TIP!
+\begin{itemize}
+        \item \textit{When LSDj is slave, it is possible to temporarily play
+slower or faster by pressing \textsc{a+left/right} on tempo in project screen. This can
+be very useful when being hooked up to some external hardware that has drifted slightly out
+of sync.}
+	\end{itemize}
+\end{figure}
+
+\section{Nanoloop Sync}
+
+Nanoloop is a Game Boy music program that can be found on \url{http://www.nanoloop.de}. Nanoloop can sync to LSDj using a normal Nintendo Game Link cable.
+
+Usage: Set LSDj to \textsc{nano} master sync mode, and set Nanoloop to \textsc{midi} slave mode. LSDj should use grooves based on 6 ticks.
+
+\section{Analog Sync}
+
+LSDj can sync to music equipment that sends analog sync signals. This sync mode has been tested with the Korg Volca series, but likely it will work with other machines as well.
+
+A cable should be easy to make, since no particular electronics are needed: all it takes is to splice a Nintendo Game Link Cable and a 3.5mm mini plug cable together. The wires should be connected as shown in the below diagram: GND goes to GND, CLK goes to CLK. 
+
+\includegraphics[clip=true,trim=0 0 460 250,angle=270,width=12cm]{analogcable}\\
+
+As a clarification, the above diagram is looking at the cable, and the wires are probably not red and blue in reality.
+
+Once the cable is built, connect it to the Game Boy serial port and the \textsc{sync out} of your synthesizer. In project screen, set LSDj to \textsc{analog} sync mode. The \textsc{ticks/step} setting controls how many LSDj ticks should be generated for each incoming sync signal. Depending on the synthesizer, it may be necessary to change this setting to make LSDj run at the right speed. For Korg Monotribe, it should typically be set to 6, whereas for Korg Volca, it should be C.
+
+\section{Keyboard Control}
+
+The \textsc{keybd} sync mode is not really about synchronization. Instead, it allows connecting a standard \textsc{pc} keyboard to the Game Boy, so it can be played as a piano. This is useful for live shows and improvisation. For information on how to build a \textsc{pc} keyboard to Game Boy adapter, please refer to the website at \url{http://www.littlesounddj.com}.
+
+Important: To get a sound when playing on the keyboard, the sequencer must already be running. (Press \textsc{start} first!) The notes you play will be played back on the next step in the phrase sequencer. To get finer timing, use a faster groove for the phrase you are playing.
+
+\subsection{Keyboard Note Layout}
+
+\begin{figure}[htpb]
+	\begin{center}
+	\fbox{\includegraphics[width=12cm]{keybd-map}}
+	\end{center}
+	\caption{PC Keyboard Map}
+	\label{fig:keybd-map}
+\end{figure}
+
+\begin{description}
+\item[\textsc{space}] play using custom table
+\item[\textsc{f1/f2}] octave down/up
+\item[\textsc{f3/f4}] instrument down/up
+\item[\textsc{f5/f6}] select custom table to assign to \textsc{space}
+\item[\textsc{f8}] change pulse instrument playback channels (\textsc{PU1, PU2, PU1+2})
+\item[\textsc{f9-f12}] toggle channel mute (switches on key press)
+\item[\textsc{ctrl+(f9-f12)}] tap channel mute (switches on key press and release)
+\item[\textsc{cursor}] move around cursor
+\item[\textsc{enter}] play chain
+\item[\textsc{ctrl+enter}] stop chain
+\item[\textsc{page up/down}] \textsc{b+up/down}
+\end{description}
+

@@ -1,0 +1,229 @@
+\chapter{Commands}
+
+Commands can be used in phrases and tables for altering the sound. There is a lot of power hidden in the commands, so it is suggested that you skim through this chapter at least once to get an idea of what they can do for you.
+
+\includegraphics[width=1cm]{tip}TIP!
+\begin{itemize}
+        \item \textit{Tapping \textsc{a} on a command letter will display a scrolling help text in the top of the screen. \textsc{a+cursor} can then be used to browse through the existing commands. The text can be paused by holding \textsc{select}.}
+	%\marginpar{\includegraphics[width=1cm]{tip}TIP!}
+	\end{itemize}
+
+\section{A: Run tAble}
+
+Run a table. This command can be used in phrases, or inside a table, for jumping to another table.
+
+\begin{description}
+\item[A03] run table 3
+\end{description}
+
+\section{C: Chord}
+\label{command-chord}
+Produce chords by doing a simple arpeggio that extends the base note with the given semitones.
+
+\begin{description}
+\item[C37] plays a minor chord: 0, 3, 7, 0, 3, 7, 0, 3, 7, \ldots
+\item[C47] plays a major chord: 0, 4, 7, 0, 4, 7, 0, 4, 7, \ldots
+\item[C0C] plays 0, 0, C, 0, 0, C, 0, 0, C, \ldots
+\item[CC0] plays 0, C, 0, C, 0, C, \ldots
+\item[CCC] plays 0, C, C, 0, C, C, 0, C, C, \ldots
+\end{description}
+
+\section{D: Delay}
+
+Delay the triggering of a note with the given number of ticks.
+
+\section{E: Amplitude Envelope}
+
+This command functions in two different ways, depending on which instrument type it is used on.
+
+\subsection{For Pulse and Noise Instruments}
+The first value digit sets the initial amplitude (0=min, \$F=max); the second digit sets the release (0,8: no change, 1-7: decrease, 9-\$F: increase).
+
+\subsection{For Wave Instruments}
+\begin{description}
+\item[E00] volume 0\%
+\item[E01] volume 25\%
+\item[E02] volume 50\%
+\item[E03] volume 100\%
+\end{description}
+
+\section{F: Wave Frame} 
+
+This command can be used on wave and kit instruments only.
+
+\subsection{For Kit Instruments:}
+Modify the start offset of the sample.
+
+\subsection{For Wave Instruments:}
+Change the wave frame that's being played on the wave channel. This command is relative, meaning that the command value will be added to the current frame number. This can be used for playing through synth sounds manually.
+
+\includegraphics[width=1cm]{tip}TIP!
+\begin{itemize}
+        \item \textit{Since a synth sound contains 16 (\$10) waves, issuing the command \textsc{F10} will in effect jump to the next synth sound.}
+	%\marginpar{\includegraphics[width=1cm]{tip}TIP!}
+	\end{itemize}
+
+\begin{description}
+\item Example:
+\item[F01] If wave frame 3 is being played, advance 1 frame and start playing frame number 4.
+\end{description}
+
+\section{G: Groove Select}
+
+Select the groove to use when playing phrases or tables.
+
+\begin{description}
+\item Example:
+\item[G04] select groove 4
+\end{description}
+
+\section{H: Hop (or Stop)}
+
+The H command is used to hop to a new play position. It can also be used to stop playing (\texttt{HFF}).
+
+H works a little differently, depending on whether it is used in the phrase or the table screen. 
+
+\subsection{Phrase Screen}
+
+In the phrase screen, H is used for jumping to the next phrase, without playing the current phrase to its end.
+\begin{description}
+\item Example:
+\item[H00] hop to next phrase
+\item[H03] hop to next phrase and start play at phrase row 3
+\item[HFF] stop playing song (or channel, if in live mode)
+\end{description}
+\includegraphics[width=1cm]{tip}TIP!
+\nolinebreak
+\begin{itemize}
+        \item \textit{If you want to compose in waltz time (3/4), put \textsc{H00} commands on step \textsc{C} in every phrase.}
+\end{itemize}
+
+ 
+\subsection{Table Screen}
+
+In the table screen, H is used for creating table loops. The first digit sets how many times the hop should be done before moving on; 0 means ``forever.'' The second digit sets the table step to jump to. Loops can be nested; that is, you can have smaller loops inside bigger ones.
+
+\begin{description}
+\item Example:
+\item[H21] hop twice to table position 1.
+\item[H04] hop to table position 4 forever.
+\end{description}
+
+\section{K: Kill Note}
+
+\begin{description}
+\item Example:
+\item[K00] kill note instantly
+\item[K03] kill note after 3 ticks
+\end{description}
+
+\section{L: Slide}
+
+The L command works on pulse and wave instruments only. It performs a pitch bend that stops when it reaches a given note.
+
+Example:
+  
+\begin{verbatim}
+  C-4 ---
+  F-4 L04
+  --- ---
+  C-4 L03
+\end{verbatim}
+  
+This will result in a pitch bend that starts with C-4, bends to F-4 with the speed 4, and then bends back to C-4 with speed 3.
+
+Warning: If using the L command next to an empty note value ("---"), results will be undefined.
+
+\section{M: Master Volume}
+
+This command changes the master output volume. The first digit modifies the left output, the second digit the right. The volume can either be set with an absolute value, or changed by a relative value. 
+
+Values 0-7 are used to specify absolute volumes. Values 8-\$F give the volume a relative change; 8 is no change, 9-\$B increase, \$D-\$F decrease.
+
+\begin{description}
+\item Examples:
+\item[M77] maximize volume
+\item[M08] turn off left output channel, leave right output channel as is
+\item[M99] increase master volume with 1 step
+\item[MFE] decrease left volume with 1 step, right volume with 2 steps
+\end{description}
+
+\section{O: Set Output}
+
+Pan channel to left, right, none or both outputs.
+
+\section{P: Pitch Bend/Pitch Shift}
+
+The Pitch Bend command works on pulse and wave channels only. When it is used on \texttt{KIT} instruments, it sounds more like a pitch shifter.
+
+\begin{description}
+\item Example:
+\item[P02] bend up pitch with speed 2
+\item[PFE] bend down pitch with speed 2 (\$FE=-2)
+\end{description}
+
+\section{R: Retrig the Latest Played Note} 
+
+Play the latest played note again. The first digit modulates the volume (0=no change, 1-7=increase, 8-\$F=decrease). The second digit sets a period for the retriggering, zero being the fastest.
+
+\begin{description}
+\item Example:
+\item[R00] very fast retriggering
+\item[RF3] medium speed retriggering, decreasing amplitude (echo effect)
+\end{description}
+
+\section{S: Sweep/Shape} 
+
+This command has different effects for different instrument types.
+
+\subsection{Pulse Instruments}
+
+S modulates pitch, using the Game Boy hardware. It is useful for creating bass drums and percussion. The first digit affects pitch, the second changes pitch bend velocity.
+
+Note: S has no effect when being used in pulse channel 2!
+
+\subsection{Kit Instruments}
+
+S changes the loop points. The first digit modulates the offset value; the second digit modulates the loop length. (1-7=increase, 9-\$F=decrease.) Used creatively, this command can be very useful for creating a wide range of percussive and timbral effects.
+
+\subsection{Noise Instruments}
+\label{command-shape-noise}
+
+On the noise channel, S works like a noise shape filter.
+The first digit alters pitch, the second digit alters the randomness.
+The command is relative, meaning that the pitch/randomness values
+will be added to the currently used values.
+
+In some cases, this command can randomly mute the sound. If that becomes a problem, set
+\textsc{s cmd} to \textsc{stable} in instrument screen.
+
+\section{T: Tempo}
+
+Change the tick frequency so that the given \textsc{bpm} will be produced. The \textsc{bpm} setting will be accurate only if the active groove has 6 ticks per note step. If the groove has some other number of ticks per note step, the \textsc{bpm} value should be adjusted according to the formula 
+\begin{math}
+lsdj\_bpm = (desired\_bpm \times ticks\_per\_step)/{6}
+\end{math}.
+
+\begin{description}
+\item Example:
+\item[T80] set tempo to 128 (\$80) \textsc{bpm}
+\end{description}
+
+\section{V: Vibrato}
+
+Vibrate pitch. This command has no effect on noise instruments.
+
+\begin{description}
+\item Example:
+\item[V42] period=4, depth=2
+\end{description}
+
+\section{W: Wave}
+
+The W command is used to select one of the four preset pulse waveforms. It can only be used with pulse instruments.
+
+\section{Z: RandomiZe}
+
+The Z command can be used in the phrase and table screens. It repeats the last non-Z command issued in a phrase in the current channel, using the then used command value added with a random number between 0 and the given Z command value.
+
+Note: Randomize does not work with Hop, Groove and Delay commands at the moment.
