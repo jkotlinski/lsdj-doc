@@ -51,7 +51,7 @@ Nanoloop is a Game Boy music program that can be found on \url{http://www.nanolo
 
 Usage: Set LSDj to \textsc{nano} master sync mode, and set Nanoloop to \textsc{midi} slave mode. LSDj should use grooves based on 6 ticks.
 
-\section{Analog Sync}
+\section{Analog In}
 
 LSDj can sync to music equipment that sends analog sync signals. This sync mode has been tested with the Korg Volca series, but likely it will work with other machines as well.
 
@@ -62,6 +62,14 @@ A cable should be easy to make, since no particular electronics are needed: all 
 As a clarification, the above diagram is looking at the cable, and the wires are probably not red and blue in reality.
 
 Once the cable is built, connect it to the Game Boy serial port and the \textsc{sync out} of your synthesizer. In project screen, set LSDj to \textsc{analog} sync mode. The \textsc{ticks/step} setting controls how many LSDj ticks should be generated for each incoming sync signal. Depending on the synthesizer, it may be necessary to change this setting to make LSDj run at the right speed. For Korg Monotribe, it should typically be set to 6, whereas for Korg Volca, it should be C.
+
+\section{Analog Out}
+
+Analog Out works similar to Analog In, except that in this mode, LSDj is responsible for sending the sync signal. The cable needs be constructed using the following pins:
+
+\includegraphics[clip=true,trim=0 0 460 250,angle=270,width=12cm]{analog-out}\\
+
+Also, the cable should be connected to \textsc{sync in} of your synthesizer rather than \textsc{sync out}.
 
 \section{Keyboard Control}
 
