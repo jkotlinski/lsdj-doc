@@ -112,7 +112,7 @@ The phrase screen is the most fundamental part of the sequencer; this is where y
 
 The different channels all share the same set of phrases; that is, any phrase may be played back on any channel. A phrase might however sound very different, depending on the channel it is played back on. Example: If you have programmed a phrase to play a melody using a pulse instrument, that phrase can be played back in either of the pulse channels with good results, but it usually doesn't make sense to play back the phrase in the wave or noise channels. 
 
-The note column may look a different depending on which instrument type is used. Most instruments present the note followed by octave. Instruments that play back samples (\textsc{kit}, \textsc{speech}) do however present the sample names instead.
+The note column may look different depending on which instrument type is used. Most instruments present the note followed by octave. Instruments that play back samples (\textsc{kit}, \textsc{speech}) do however present the sample names instead.
 
 The instrument column is used for selecting instruments. In total, you can use 64 different instruments, editable in the instrument screen.
 
@@ -149,7 +149,7 @@ There are five types of instruments available:
 \item[\textsc{wave}] This instrument type can play back waves synthesized using the synth screen. It is used in the wave channel.
 \item[\textsc{kit}] This instrument type plays sampled kits, stored in \textsc{rom}. (The samples are stored in 4 bits, 11,468 kHz.) It is used in the wave channel.
 \item[\textsc{noise}] This instrument type produces filtered noise, and is used in the noise channel.
-\item[\textsc{speech}] This instrument is locked to instrument number \$40, and is used for programming speech. For learning how to generate speech, please look up chapter \ref{speech-chapter}.
+\item[\textsc{speech}] This instrument is locked to instrument number \$40, and is used for programming speech. For learning how to generate speech, please read chapter \ref{speech-chapter}.
 \end{description}
 
 You can change the instrument type by going to the type row and pressing \textsc{a+cursor}.
@@ -178,7 +178,7 @@ Remember that instruments don't automatically play in the right channel. For exa
 These parameters are used in most instrument types.
 
 \begin{description}
-	\item[\textsc{name}] Name the instrument by pressing \textsc{a}. This is useful for keeping track on your instruments. The instrument name will also be shown in the border when selecting instruments in the phrase screen.
+	\item[\textsc{name}] Name the instrument by pressing \textsc{a}. This is useful for keeping track of your instruments. The instrument name will also be shown in the border when selecting instruments in the phrase screen.
 	\item[\textsc{type}] Use this to specify the instrument type.
 	\item[\textsc{length}] Change the sound length.
 	\item[\textsc{pan}] Pan the sound to left/right/both/none speakers. (Use the headphone output to hear the difference!)
@@ -310,7 +310,7 @@ The first digit in the envelope column sets the amplitude; the second digit sets
 	\label{fig:table-amp}
 \end{figure}
 
-The table in figure~\ref{fig:table-amp} creates an amplitude envelope with short attack and medium sustain. It could be used for a base instrument.
+The table in figure~\ref{fig:table-amp} creates an amplitude envelope with short attack and medium sustain. It could be used for a bass instrument.
 
 \subsection{Arpeggio Example}
 
@@ -322,7 +322,7 @@ The table in figure~\ref{fig:table-amp} creates an amplitude envelope with short
 	\label{fig:table-arp}
 \end{figure}
 
-A typical use for tables is to create arpeggios. This is a musical term for playing scales very fast, so that the listener will get the impression that a chord is played. The table in figure~\ref{fig:table-arp} would emulate striking a major chord.
+A typical use for tables is to create arpeggios. This is a musical term for playing notes very fast, so that the listener will get the impression that a chord is played. The table in figure~\ref{fig:table-arp} would emulate striking a major chord.
 
 Shorter arpeggios can just as well be created using the C (chord) command in phrases (see \ref{command-chord} for example). Tables however still have to be used for creating longer arpeggios.
 
@@ -378,7 +378,7 @@ The synth screen features a soft synthesizer that generates sounds to be played 
 \begin{figure}[h]
 \includegraphics[width=1cm]{tip}TIP!
 \begin{itemize}
-	\item \textit{Each synth program uses \$10 waves. Synth program 0 uses waves \$00-\$0F, synth program 1 uses waves \$10-\$1F, and so on. It is possible to have look at the resulting synth sounds in the wave screen (Section~\ref{wave-screen-section}).}
+	\item \textit{Each synth program uses \$10 waves. Synth program 0 uses waves \$00-\$0F, synth program 1 uses waves \$10-\$1F, and so on. It is possible to look at the resulting synth sounds in the wave screen (Section~\ref{wave-screen-section}).}
 \end{itemize}
 \end{figure}
 
@@ -491,7 +491,7 @@ slave in sync mode, it is possible to temporarily play a little faster or slower
 	\item[\textsc{prelisten}] Play notes and instruments while entering them.
 	\item[\textsc{help}] Enter help screen. The help screen contains a quick reference for button presses and a command list.
 
-	\item[\textsc{clean song data}] Clear all phrases and chains that are not used in the song. Also, if there are several phrases with the same content, they will be combined to one. \label{clean-song-data}
+	\item[\textsc{clean song data}] Clear all phrases and chains that are not used in the song. Also, if there are several phrases with the same content, they will be reduced to one. \label{clean-song-data}
 	\item[\textsc{clean instr data}] Clear all instruments, tables, synths and waves that are not used in the song.
 	\item[\textsc{load/save song}] Enter file manager. \footnote{The file manager is only available for cartridges that have 1 Mbit SRAM or more. In case your cartridge doesn't have 1 Mbit SRAM, this button will be replaced with a \textsc{reset memory} button.}
 \end{description}
