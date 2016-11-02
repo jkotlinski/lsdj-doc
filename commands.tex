@@ -47,7 +47,7 @@ The first value digit sets the initial amplitude (0=min, \$F=max); the second di
 \item[E03] volume 100\%
 \end{description}
 
-\section{F: Wave Frame} 
+\section{F: Wave Frame}
 
 This command can be used on wave and kit instruments only.
 
@@ -81,7 +81,7 @@ Select the groove to use when playing phrases or tables.
 
 The H command is used to hop to a new play position. It can also be used to stop playing (\texttt{HFF}).
 
-H works a little differently, depending on whether it is used in the phrase or the table screen. 
+H works a little differently, depending on whether it is used in the phrase or the table screen.
 
 \subsection{Phrase Screen}
 
@@ -98,7 +98,7 @@ In the phrase screen, H is used for jumping to the next phrase, without playing 
         \item \textit{If you want to compose in waltz time (3/4), put \textsc{H00} commands on step \textsc{C} in every phrase.}
 \end{itemize}
 
- 
+
 \subsection{Table Screen}
 
 In the table screen, H is used for creating table loops. The first digit sets how many times the hop should be done before moving on; 0 means ``forever.'' The second digit sets the table step to jump to. Loops can be nested; that is, you can have smaller loops inside bigger ones.
@@ -122,29 +122,29 @@ In the table screen, H is used for creating table loops. The first digit sets ho
 The L command works on pulse and wave instruments only. It performs a pitch bend that stops when it reaches a given note.
 
 Example:
-  
+
 \begin{verbatim}
   C-4 ---
   F-4 L04
   --- ---
   C-4 L03
 \end{verbatim}
-  
+
 This will result in a pitch bend that starts with C-4, bends to F-4 with the speed 4, and then bends back to C-4 with speed 3.
 
 Warning: If using the L command next to an empty note value ("---"), results will be undefined.
 
 \section{M: Master Volume}
 
-This command changes the master output volume. The first digit modifies the left output, the second digit the right. The volume can either be set with an absolute value, or changed by a relative value. 
+This command changes the master output volume. The first digit modifies the left output, the second digit the right. The volume can either be set with an absolute value, or changed by a relative value.
 
 Values 0-7 are used to specify absolute volumes. Values 8-\$F give the volume a relative change; 8 is no change, 9-\$B increase, \$D-\$F decrease.
 
 \begin{description}
 \item Examples:
 \item[M77] maximize volume
-\item[M08] turn off left output channel, leave right output channel as is
-\item[M99] increase master volume with 1 step
+\item[M08] minimize left volume, leave right volume unchanged
+\item[M99] increase volume with 1 step
 \item[MFE] decrease left volume with 1 step, right volume with 2 steps
 \end{description}
 
@@ -162,7 +162,7 @@ The Pitch Bend command works on pulse and wave channels only. When it is used on
 \item[PFE] bend down pitch with speed 2 (\$FE=-2)
 \end{description}
 
-\section{R: Retrig the Latest Played Note} 
+\section{R: Retrig the Latest Played Note}
 
 Play the latest played note again. The first digit modulates the volume (0=no change, 1-7=increase, 8-\$F=decrease). The second digit sets a period for the retriggering, zero being the fastest.
 
@@ -172,7 +172,7 @@ Play the latest played note again. The first digit modulates the volume (0=no ch
 \item[RF3] medium speed retriggering, decreasing amplitude (echo effect)
 \end{description}
 
-\section{S: Sweep/Shape} 
+\section{S: Sweep/Shape}
 
 This command has different effects for different instrument types.
 
@@ -199,7 +199,7 @@ In some cases, this command can randomly mute the sound. If that becomes a probl
 
 \section{T: Tempo}
 
-Change the tick frequency so that the given \textsc{bpm} will be produced. The \textsc{bpm} setting will be accurate only if the active groove has 6 ticks per note step. If the groove has some other number of ticks per note step, the \textsc{bpm} value should be adjusted according to the formula 
+Change the tick frequency so that the given \textsc{bpm} will be produced. The \textsc{bpm} setting will be accurate only if the active groove has 6 ticks per note step. If the groove has some other number of ticks per note step, the \textsc{bpm} value should be adjusted according to the formula
 \begin{math}
 lsdj\_bpm = (desired\_bpm \times ticks\_per\_step)/{6}
 \end{math}.
