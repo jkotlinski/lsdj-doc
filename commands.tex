@@ -77,21 +77,18 @@ Select the groove to use when playing phrases or tables.
 \item[G04] select groove 4
 \end{description}
 
-\section{H: Hop (or Stop)}
+\section{H: Hop}
 
-The H command is used to hop to a new play position. It can also be used to stop playing (\texttt{HFF}).
+H hops to a new play position. It can also be used to stop playing.
 
-H works a little differently, depending on whether it is used in the phrase or the table screen.
+\subsection{H in Phrases}
 
-\subsection{Phrase Screen}
-
-In the phrase screen, H is used for jumping to the next phrase, without playing the current phrase to its end.
 \begin{description}
-\item Example:
-\item[H00] hop to next phrase
-\item[H03] hop to next phrase and start play at phrase row 3
-\item[HFF] stop playing song (or channel, if in live mode)
+    \item[H00-H0F] Hop to next phrase. The digit sets destination phrase step.
+    \item[H10-HFE] Hop back within the phrase. The first digit sets loop count, the second digit sets destination step.
+    \item[HFF] Stop playing song (or channel, if in live mode).
 \end{description}
+
 \includegraphics[width=1cm]{tip}TIP!
 \nolinebreak
 \begin{itemize}
@@ -99,7 +96,7 @@ In the phrase screen, H is used for jumping to the next phrase, without playing 
 \end{itemize}
 
 
-\subsection{Table Screen}
+\subsection{H in Tables}
 
 In the table screen, H is used for creating table loops. The first digit sets how many times the hop should be done before moving on; 0 means ``forever.'' The second digit sets the table step to jump to. Loops can be nested; that is, you can have smaller loops inside bigger ones.
 
