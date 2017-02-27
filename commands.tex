@@ -116,20 +116,20 @@ In the table screen, H is used for creating table loops. The first digit sets ho
 
 \section{L: Slide}
 
-The L command works on pulse and wave instruments only. It performs a pitch bend that stops when it reaches a given note.
+The L command works on pulse and wave instruments. It slides to the note with a given duration (0 is fastest, \$FF is slowest). The duration differs depending on whether the instrument is set to normal or HF vibrato.
 
 Example:
 
 \begin{verbatim}
   C-4 ---
-  F-4 L04
+  F-4 L40
   --- ---
-  C-4 L03
+  C-4 L10
 \end{verbatim}
 
-This will result in a pitch bend that starts with C-4, bends to F-4 with the speed 4, and then bends back to C-4 with speed 3.
+This will result in a slide that starts with C-4, bends to F-4, and then quickly bends back to C-4.
 
-Warning: If using the L command next to an empty note value ("---"), results will be undefined.
+The L command also works in tables. Then, it will bend to the pitch given by the transpose column.
 
 \section{M: Master Volume}
 
@@ -151,12 +151,12 @@ Pan channel to left, right, none or both outputs.
 
 \section{P: Pitch Bend/Pitch Shift}
 
-The Pitch Bend command works on pulse and wave channels only. When it is used on \texttt{KIT} instruments, it sounds more like a pitch shifter.
+The pitch command works on pulse and wave channels. When used on \texttt{KIT} instruments, it sounds more like a pitch shifter. The actual speed depends on whether the instrument is set to HF or normal vibrato.
 
 \begin{description}
 \item Example:
-\item[P02] bend up pitch with speed 2
-\item[PFE] bend down pitch with speed 2 (\$FE=-2)
+\item[P02] pitch bend up with speed 2
+\item[PFE] pitch bend down with speed 2 (\$FE=-2)
 \end{description}
 
 \section{R: Retrig the Latest Played Note}
