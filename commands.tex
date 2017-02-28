@@ -226,6 +226,13 @@ The first digit sets synth sound speed, the second sets synth sound length.
 
 \section{Z: RandomiZe}
 
-The Z command repeats the last non-Z command, adding a random number to the original command value. The Z command value is a bit mask, meaning that ZF0 would add some value 00, 10, 20, 30, ..., to the original value.
+The Z command repeats the last non-Z command, adding a random number to the original command value. The Z value controls the maximum value of each digit to be added.
+
+\begin{description}
+\item Example:
+\item[Z02] adds one of 0, 1, 2 to the original value.
+\item[Z20] adds one of 0, 10, 20 to the original value.
+\item[Z22] adds one of 0, 1, 2, 10, 11, 12, 20, 21, 22.
+\end{description}
 
 Note: Randomize does not work with Hop, Groove and Delay commands at the moment.
