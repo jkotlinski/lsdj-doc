@@ -226,6 +226,6 @@ The first digit sets synth sound speed, the second sets synth sound length.
 
 \section{Z: RandomiZe}
 
-The Z command can be used in the phrase and table screens. It repeats the last non-Z command issued in a phrase in the current channel, using the then used command value added with a random number between 0 and the given Z command value.
+The Z command repeats the last non-Z command, adding a random number to the original command value. The Z command value is a bit mask, meaning that ZF0 would add some value 00, 10, 20, 30, ..., to the original value.
 
 Note: Randomize does not work with Hop, Groove and Delay commands at the moment.
