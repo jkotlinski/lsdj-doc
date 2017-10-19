@@ -163,11 +163,12 @@ The pitch command works on pulse and wave channels. When used on \textsc{kit} in
 
 \section{R: Retrig the Latest Played Note}
 
-Play the latest played note again. The first digit modulates the volume (0=no change, 1-7=increase, 8-\$F=decrease). The second digit sets a period for the retriggering, zero being the fastest.
+Play the latest played note again. The first digit modulates the volume (0=no change, 1-7=increase, 8-\$F=decrease). The second digit sets a period for the retriggering, zero being the fastest and $E the slowest. Period $F means only retrig once.
 
 \begin{description}
 \item Example:
 \item[R00] very fast retriggering
+\item[R0F] retrigger once
 \item[RF3] medium speed retriggering, decreasing amplitude (echo effect)
 \end{description}
 
