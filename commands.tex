@@ -118,7 +118,7 @@ In the table screen, H is used for creating table loops. The first digit sets ho
 
 \section{L: Slide}
 
-The L command works on pulse and wave instruments. It slides to the note with a given duration (0 is fastest, \$FF is slowest). The duration differs depending on whether the instrument is set to normal or HF vibrato.
+The L command works on pulse and wave instruments. It slides to the target note with in a given duration. The duration differs depending on whether the instrument is set to normal or HF vibrato. In normal mode, the duration is in ticks, in HF mode the duration is n/360 seconds. If the duration is set to 0, the slide will happen instantly without stopping the P command.
 
 Example:
 
