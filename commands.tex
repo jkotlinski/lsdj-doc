@@ -18,6 +18,9 @@ Starts or stops tables in the current channel. Use the table number you want to 
 \end{description}
 
 \section{C: Chord}
+
+\subsection{For Pulse and Wave Instruments:}
+
 \label{command-chord}
 Produce chords by doing a simple arpeggio that extends the base note with the given semitones.
 
@@ -28,6 +31,10 @@ Produce chords by doing a simple arpeggio that extends the base note with the gi
 \item[CC0] plays 0, C, 0, C, 0, C, \ldots
 \item[CCC] plays 0, C, C, 0, C, C, 0, C, C, \ldots
 \end{description}
+
+\subsection{For Noise Instruments:}
+
+Applies S command with the given value every second tick.
 
 \section{D: Delay}
 
@@ -151,15 +158,23 @@ Values 0-7 are used to specify absolute volumes. Values 8-\$F give the volume a 
 
 Pan channel to left, right, none or both outputs.
 
-\section{P: Pitch Bend/Pitch Shift}
+\section{P: Pitch Bend}
 
-The pitch command works on pulse and wave channels. When used on \textsc{kit} instruments, it sounds more like a pitch shifter. The actual speed depends on whether the instrument is set to \textsc{hf} or normal vibrato. In \textsc{hf} mode, pitch will be updated at 360 Hz, otherwise pitch update happens at regular ticks.
+\subsection{For Pulse, Wave and Kit Instruments:}
+
+Does a pitch bend with the given speed. On \textsc{kit} instruments, it gives an effect similar to pitch shift.
+
+The actual speed depends on the instrument's \textsc{p+l+v} setting. In \textsc{hf} mode, the pitch will be updated at 360 Hz, otherwise it changes every tick.
 
 \begin{description}
 \item Example:
 \item[P02] pitch bend up with speed 2
 \item[PFE] pitch bend down with speed 2 (\$FE=-2)
 \end{description}
+
+\subsection{For Noise Instruments:}
+
+Applies S command with the given value every tick.
 
 \section{R: Retrig the Latest Played Note}
 
