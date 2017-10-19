@@ -104,7 +104,6 @@ H hops to a new play position. It can also be used to stop playing.
         \item \textit{If you want to compose in waltz time (3/4), put \textsc{H00} commands on step \textsc{C} in every phrase.}
 \end{itemize}
 
-
 \subsection{H in Tables}
 
 In the table screen, H is used for creating table loops. The first digit sets how many times the hop should be done before moving on; 0 means ``forever.'' The second digit sets the table step to jump to. Loops can be nested; that is, you can have smaller loops inside bigger ones.
@@ -123,9 +122,9 @@ In the table screen, H is used for creating table loops. The first digit sets ho
 \item[K03] kill note after 3 ticks
 \end{description}
 
-\section{L: Slide}
+\section{L: Slide [PU1, PU2, WAV]}
 
-The L command works on pulse and wave instruments. It slides to the target note with in a given duration. The duration differs depending on whether the instrument is set to normal or HF vibrato. In normal mode, the duration is in ticks, in HF mode the duration is n/360 seconds. If the duration is set to 0, the slide will happen instantly without stopping the P command.
+Slides to the target note in the given duration. The actual time depends on the instrument's \textsc{p+l+v} setting; in \textsc{hf} mode the duration is n/360 seconds, otherwise the duration is in ticks. If the duration is set to 0, the slide will happen instantly without stopping the P command.
 
 Example:
 
