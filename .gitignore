@@ -1,0 +1,6 @@
+*.aux
+lsdj-manual.pdf
+*.toc
+*.out
+*.log
+*.dia~

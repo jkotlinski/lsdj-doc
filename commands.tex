@@ -137,7 +137,19 @@ Example:
 
 This will result in a slide that starts with C-4, bends to F-4, and then quickly bends back to C-4.
 
-The L command can also be used in the left table command column. There, it will bend to the pitch given by the transpose column.
+\subsection{L in Tables}
+
+The L command also works in the left table command column, using the transpose column to set target note relative to the base note.
+
+\begin{figure}[htbp]
+	\begin{center}
+		\fbox{\includegraphics{table-slide}}
+	\end{center}
+	% \caption{Synth Screen}
+	% \label{fig:synth}
+\end{figure}
+
+Regular transposes and slides are added together independently. In the above example, step 0 transposes one octave up. In step 1, the L command starts sliding one octave down while keeping the transpose from step 0. In step 2, the L command is allowed to play out while the transpose stays one octave up. Eventually, L will stop one octave down, cancelling out the transpose and in practice returning to the base note.
 
 \section{M: Master Volume}
 
