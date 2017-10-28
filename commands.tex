@@ -124,7 +124,7 @@ In the table screen, H is used for creating table loops. The first digit sets ho
 
 \section{L: Slide}
 
-Slides to the target note in the given duration. The actual time depends on the instrument's \textsc{p+l+vib} setting; in \textsc{hf} mode the duration is n/360 seconds, otherwise the duration is in ticks. If the duration is set to 0, the slide will happen instantly without stopping the P command.
+Slides to the target note in the given duration. If the instrument's \textsc{p/l/v} setting is \textsc{tick}, the duration is given in ticks, otherwise in n/360 seconds.
 
 Example:
 
@@ -173,14 +173,19 @@ Pan channel to left, right, none or both outputs.
 
 \subsection{For Pulse, Wave and Kit Instruments:}
 
-Does a pitch bend with the given speed. On \textsc{kit} instruments, it gives an effect similar to pitch shift.
-
-The actual speed depends on the instrument's \textsc{p+l+vib} setting. In \textsc{hf} mode, the pitch will be updated at 360 Hz, otherwise it changes every tick.
+Does a pitch change with the given speed. The behavior depends on the instrument's \textsc{p/l/v} setting:
 
 \begin{description}
-\item Example:
-\item[P02] pitch bend up with speed 2
-\item[PFE] pitch bend down with speed 2 (\$FE=-2)
+    \item[\textsc{fast}] Pitch bend that updates at 360 Hz.
+    \item[\textsc{tick}] Pitch bend that updates every tick.
+    \item[\textsc{step}] Immediate pitch change without bend.
+\end{description}
+
+Example:
+
+\begin{description}
+\item[P02] Pitch change up with speed 2.
+\item[PFE] Pitch change down with speed 2. (\$FE=-2)
 \end{description}
 
 \subsection{For Noise Instruments:}
