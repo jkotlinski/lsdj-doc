@@ -175,6 +175,7 @@ Remember that instruments don't automatically play in the right channel. For exa
 \end{itemize}
 
 \subsection{General Instrument Parameters}
+\label{general-instrument-parameters}
 
 These parameters are used in most instrument types.
 
@@ -504,6 +505,7 @@ slave in sync mode, it is possible to temporarily play a little faster or slower
 	\item[\textsc{key delay}] Set the delay time before key repeat is activated for the Game Boy buttons.
 	\item[\textsc{key repeat}] Set the key repeat speed for the Game Boy buttons.
 	\item[\textsc{prelisten}] Play notes and instruments while entering them.
+    \item[\textsc{drm max}] Adjusts the range of \textsc{drm} tuning (section~\ref{general-instrument-parameters}). By default, note B-A in \textsc{drm} tuning equals B-A in \textsc{12t} tuning. Use this setting if you want to map \textsc{drm} B-A to a lower note.
 	\item[\textsc{help}] Enter help screen. The help screen contains a quick reference for button presses and a command list.
 
 	\item[\textsc{clean song data}] Clear all phrases and chains that are not used in the song. Also, if there are several phrases with the same content, they will be reduced to one. \label{clean-song-data}
