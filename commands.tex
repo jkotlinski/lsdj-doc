@@ -58,7 +58,8 @@ The first value digit sets the initial amplitude (0=min, \$F=max); the second di
 \section{F: Wave Frame/Finetune}
 
 \subsection{For Pulse Instruments:}
-The first digit sets \textsc{pu2 tune}, the second \textsc{pu fine}. (See section~\ref{detune} for further explanation.)
+The first digit sets \textsc{pu2 tune}, the second \textsc{pu fine}.
+See \nameref{detune}.
 
 \subsection{For Kit Instruments:}
 Modifies the sample position. \$00-\$7F steps forward, \$80-\$FF steps back.
@@ -218,15 +219,9 @@ Note: S has no effect when being used in pulse channel 2!
 S changes the loop points. The first digit modulates the offset value; the second digit modulates the loop length. (1-7=increase, 9-\$F=decrease.) Used creatively, this command can be very useful for creating a wide range of percussive and timbral effects.
 
 \subsection{Noise Instruments}
-\label{command-shape-noise}
 
-On the noise channel, S works like a noise shape filter.
-The first digit alters pitch, the second digit alters the randomness.
-The command is relative, meaning that the pitch/randomness values
-will be added to the currently used values.
-
-In some cases, this command can randomly mute the sound. If that becomes a problem, set
-\textsc{s cmd} to \textsc{stable} in instrument screen.
+Alters noise shape (see \nameref{noise-instrument-parameters}).
+The command is relative, meaning that the digits are independently added to the active noise shape.
 
 \section{T: Tempo}
 
