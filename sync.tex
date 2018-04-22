@@ -7,29 +7,35 @@ LSDj can be synchronized with other devices, so that it is possible to run both 
 
 \section{Game Boy to Game Boy Sync}
 
-LSDj implements Game Boy to Game Boy sync. This requires two Game Boys, two LSDj cartridges and one Nintendo Game Link cable.
+It is possible to sync two Game Boys running LSDj with a Nintendo Game Link cable.
 
-\subsection{Activating Sync}
+\subsection{Activating LSDj Sync}
 
-Make sure that both Game Boys are turned off. Connect the Game Boys using the link cable. Now, turn on the Game Boys, and go to the project screens.
+Make sure that both Game Boys are turned off. Connect the Game Boys using the link cable. Now, turn on the Game Boys, and go to the project screens. Set the \textsc{sync} mode to \textsc{lsdj} on both Game Boys.
 
-In the project screen, you'll find a \textsc{sync} parameter, which can be adjusted by pressing \textsc{a+left/right}. Set the first Game Boy to \textsc{master} and the second Game Boy to \textsc{slave}. Now, the second Game Boy will receive ticks from the first Game Boy through the link cable, ensuring that they will play at the same tempo.
+\subsection{Song Play}
 
-The sync works in two different ways, depending on whether the sequencer is in live mode or not\ldots
+When in song mode, pressing \textsc{start} starts both Game Boys from the same song position. The Game Boy on which you pressed \textsc{start} is the one that sends sync signals; this is indicated by the text \textsc{mstr} (master) appearing in the bottom right corner. The other Game Boy shows the text \textsc{slav} (slave), indicating that it is receiving sync signals.
 
-\subsection{Using Sync with Both Carts in Song Play Mode}
+\subsection{Live Play}
 
-Press \textsc{start} on the slave Game Boy. It will display the text \textsc{wait} in the bottom right corner, indicating that it is waiting for tick signals from the master Game Boy. Now, press \textsc{start} on the master Game Boy, and the slave Game Boy will start playing on the same song position as the master Game Boy.
-
-Pressing \textsc{start} again on the master Game Boy will stop both Game Boys, putting the slave Game Boy in \textsc{wait} mode.
-
-\subsection{Using Sync with Both Carts in Live Play Mode}
-
-In live play mode, both Game Boys are operated like usual. Sync is lost if the master Game Boy is stopped while the slave Game Boy is still playing. Then, stop the slave Game Boy and start again.
+Pressing \textsc{start} in live mode makes the Game Boy start like usual; also \textsc{mstr}/\textsc{slav} texts indicate that sync signals are sent between the Game Boys. When pressing \textsc{start} on the slave Game Boy, the text \textsc{wait} appears while it is waiting for a phrase start to begin play.
 
 \subsection{Clipboard Transfer}
 
-When two Game Boys are linked and not playing, copying groove, phrase, instr, table or synth data on the master Game Boy will also transfer the copied data so it can be pasted on the slave Game Boy.
+When two Game Boys are linked and not playing, copying groove, phrase, instr, table or synth data on one Game Boy will transfer the copied data so it can be pasted on the other Game Boy.
+
+\subsection{Switching Master while Playing}
+
+In some cases, it can be useful to switch which Game Boy is the master while playing. Do this by following steps:
+
+\begin{enumerate}
+    \item Set Game Boys to \textsc{lsdj} sync.
+    \item Start playing.
+    \item Set slave Game Boy to sync \textsc{off}.
+    \item Stop master Game Boy.
+    \item Set slave Game Boy to sync \textsc{lsdj}. It now becomes the master.
+\end{enumerate}
 
 \section{\textsc{Midi} Sync}
 
