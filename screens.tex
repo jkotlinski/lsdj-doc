@@ -349,8 +349,8 @@ Grooves define the speed by which your phrases and tables are played back. They 
 	\label{fig:groove}
 \end{figure}
 
-To understand the groove concept, you need to know that the sequencer's time handling is based on an abstract time period called \emph{tick}. The length of a tick varies with the song tempo, but is typically around 1/60th of a second. In the groove screen, you can specify for how many ticks each note step should be played.
-The groove in figure~\ref{fig:groove} would make the sequencer spend approximately 6/60th of a second on every note step.
+To understand grooves, you need to know that the sequencer's time handling is based on an abstract time period called \emph{tick}. The length of a tick varies with the song tempo; at 128 BPM, a tick is approximately 1/50th of a second. In the groove screen, you can specify for how many ticks each note step should be played.
+The groove in figure~\ref{fig:groove} would make the sequencer spend approximately 6/50th of a second on every note step.
 
 \begin{figure}[htbp]
 	\begin{center}
@@ -360,7 +360,7 @@ The groove in figure~\ref{fig:groove} would make the sequencer spend approximate
 	\label{fig:groove-swing}
 \end{figure}
 
-You can also use the groove screen to create custom rhythms. The groove in figure~\ref{fig:groove-swing} would make the sequencer spend 8/60th of a second on even note steps, and 5/60th of a second on odd note steps. This would create a swing feeling. With thoughtful programming, grooves can also be used to create triplets and other complex rhythm structures.
+You can also use the groove screen to create custom rhythms. The groove in figure~\ref{fig:groove-swing} would make the sequencer spend 8/50th of a second on even note steps, and 5/50th of a second on odd note steps, creating a swing. With thoughtful programming, grooves can also be used to create triplets and other complex rhythm structures.
 
 Groove 0 is the default groove for all phrases. If you want to, you can easily switch to another groove using the groove (\textsc{g}) command in the phrase screen.
 
