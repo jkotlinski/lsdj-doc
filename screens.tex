@@ -109,28 +109,28 @@ specific channel. The number of chains is limited to 128 (\$00-\$7F).
 %\label{fig:phrase}
 \end{figure}
 
-The phrase screen is the most fundamental part of the sequencer; this is where you enter the actual note data. The phrase screen has four columns: the note column, the instrument column, and the command and command value columns.
+The phrase screen is where you enter notes. It has four columns: note, instrument, command and command value.
 
-The different channels all share the same set of phrases; that is, any phrase may be played back on any channel. A phrase might however sound very different, depending on the channel it is played back on. Example: If you have programmed a phrase to play a melody using a pulse instrument, that phrase can be played back in either of the pulse channels with good results, but it usually doesn't make sense to play back the phrase in the wave or noise channels.
+Phrases are shared between channels; that is, any phrase may be played back on any channel. A phrase might however sound very different depending on which channel it is played back on. As an example, if a phrase plays a melody using a pulse instrument, it will probably sound good in the pulse channels but strange in the other channels.
 
-The note column may look different depending on which instrument type is used. Most instruments present the note followed by octave. Instruments that play back samples (\textsc{kit}, \textsc{speech}) do however present the sample names instead.
+The note column looks different depending on instrument. Usually it shows note and octave, but instruments that play back samples (\textsc{kit}, \textsc{speech}) show sample names instead.
 
-The instrument column is used for selecting instruments. In total, you can use 64 different instruments, editable in the instrument screen.
+The instrument column selects instrument. There are 65 instruments in total, all of which can be changed in the instrument screen.
 
 \includegraphics[width=1cm]{tip}TIP!
 \begin{itemize}
-\item \textit{It is possible to change the pitch without retrigging the instrument by leaving the instrument column empty.}
-%	\marginpar{\includegraphics[width=1cm]{tip}TIP!}
+    \item \textit{Notes without instrument change pitch or sample without a retrig.}
 \end{itemize}
 
-The command columns can be used to add effects to your phrase. For example, the K command kills the sound on the channel.
+The command column is used to add effects. For example, the K command kills the sound of the channel.
 
-The number of phrases is limited to 255 (\$00-\$FE). The number of the phrase that is being edited is displayed in the top left corner of the screen.
+There are 255 phrases (\$00-\$FE). The number of the phrase being edited is shown in the top of the screen.
 
 \includegraphics[width=1cm]{tip}TIP!
 \begin{itemize}
-\item \textit{All phrases are 16 steps long by default, but it is also possible to set a shorter length by using the H (hop) command.}
-%	\marginpar{\includegraphics[width=1cm]{tip}TIP!}
+    \item \textit{Phrases are 16 steps by default. To shorten the length, use the H (hop) command.}
+    \item \textit{Mute kit note columns by pressing \textsc{a+right} until \textsc{off} appears.\footnotemark}
+        \footnotetext{Only works for kits with fewer than 15 samples.}
 \end{itemize}
 
 
