@@ -186,6 +186,9 @@ These parameters are used in most instrument types.
 	\item[\textsc{output}] Send the sound to left/right/both/none speakers. (Use the headphone output to hear the difference!)
     \item[\textsc{pitch}] Controls the behavior of \textsc{p}, \textsc{l} and \textsc{v} commands. \textsc{A+u/d} switches pitch update speed: \textsc{fast} updates pitch at 360 Hz; \textsc{tick} updates pitch every tick; \textsc{step} is like \textsc{fast} except that \textsc{p} does pitch change instead of pitch bend; \textsc{drum} is like \textsc{fast} with logarithmic pitch, useful for \textsc{p} kicks. \textsc{a+l/r} changes vibrato shape between downwards triangle, saw and square, and upwards triangle, saw and square.
     \item[\textsc{transp.}] When \textsc{on}, the pitch may be affected by project and table transposes.
+    \item[\textsc{cmd/rate}] Slows down \textsc{c} and \textsc{r} commands.
+        Also affects \textsc{p} and \textsc{v} commands when \textsc{pitch} is set to \textsc{tick}.
+        0=fastest, F=slowest.
     \item[\textsc{table}] Selects a table to run when playing notes. To edit the table, press \textsc{select+right}. To create a new table, press \textsc{a,a}. To clone the table, press \textsc{select+(b,a)}.
         Changing \textsc{play} to \textsc{step} makes Little Sound Dj step through the table, advancing one step every time the instrument is triggered.
 \end{description}
