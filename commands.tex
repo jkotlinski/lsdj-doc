@@ -17,6 +17,35 @@ Starts or stops tables in the current channel. Use the table number you want to 
 \item[A20] stop table
 \end{description}
 
+\section{B: MayBe}
+
+\subsection{In Phrases (MayBe Play Note)}
+
+Controls how likely it is that the note
+or sample(s) to the left will be played.
+First digit sets probability for left kit,
+second digit sets probability for notes
+and right kit.
+
+\begin{description}
+    \item[B00] Never play note
+    \item[B0F] Always play note/right kit sample
+    \item[BF0] Always play note/left kit sample
+    \item[B08] Play note/right kit sample about 50\% of the time
+\end{description}
+
+\subsection{In Tables (MayBe Hop)}
+
+A hop that only happens sometimes.
+First digit sets probability, second digit
+sets destination row.
+
+\begin{description}
+    \item[BF5] Hop to row 5, 15 times out of 16
+    \item[B84] Hop to row 4, about 50\% of the time
+    \item[B03] Never hop to row 3
+\end{description}
+
 \section{C: Chord}
 
 \subsection{For Pulse and Wave Instruments:}
