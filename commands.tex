@@ -128,7 +128,7 @@ K instantly stops the sound, causing an audible click. If the click is not desir
 
 \section{L: Slide}
 
-Slides to the target note in the given duration. If the instrument's \textsc{p/l/v} setting is \textsc{tick}, the duration is given in ticks, otherwise in n/360 seconds.
+Slides to the target note in the given duration. If the instrument's \textsc{pitch} setting is \textsc{tick}, the duration is given in ticks, otherwise in n/360 seconds.
 
 Example:
 
@@ -177,10 +177,11 @@ Pan channel to left, right, none or both outputs.
 
 \subsection{For Pulse, Wave and Kit Instruments:}
 
-Does a pitch change with the given speed. The behavior depends on the instrument's \textsc{p/l/v} setting:
+Does a pitch change with the given speed. The behavior depends on the instrument's \textsc{pitch} setting:
 
 \begin{description}
-    \item[\textsc{fast}] Pitch bend that updates at 360 Hz.
+    \item[\textsc{drum}] Logarithmic pitch bend that updates at 360 Hz.
+    \item[\textsc{fast}] Linear pitch bend that updates at 360 Hz.
     \item[\textsc{tick}] Pitch bend that updates every tick.
     \item[\textsc{step}] Immediate pitch change without bend.
 \end{description}
@@ -240,7 +241,7 @@ lsdj\_bpm = (desired\_bpm \times ticks\_per\_step)/{6}
 
 \section{V: Vibrato}
 
-Add vibrato. Not available for noise instruments. The vibrato speed and shape depends on the instrument's \textsc{p/l/v} setting.
+Add vibrato. Not available for noise instruments. The vibrato speed and shape depends on the instrument's \textsc{pitch} setting.
 
 \begin{description}
 \item Example:
