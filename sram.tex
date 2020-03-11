@@ -1,0 +1,73 @@
+\chapter{SRAM Memory Map}
+
+\section{Bank 0}
+
+\begin{description}
+    \item[A000-AFEF] phrase notes
+    \item[AFF0-B02F] bookmarks
+    \item[B030-B08F] empty
+    \item[B090-B28F] grooves
+    \item[B290-B68F] song chains
+    \item[B690-B88F] table envelopes
+    \item[B890-BDCF] speech instrument words (\$20*42)
+    \item[BDD0-BE77] speech instrument wordnames
+    \item[BE78-BE79] mem initialized flag (set to "rb" on init)
+    \item[BE7A-BFB9] instrument names
+\end{description}
+
+\section{Bank 1}
+
+\begin{description}
+    \item[A000-A01F] empty
+    \item[A020-A03F] table allocation table
+    \item[A040-A07F] instr alloc table
+    \item[A080-A87F] chain phrases
+    \item[A880-B07F] chain transposes
+    \item[B080-B47F] instrument parameters
+    \item[B480-B67F] table transposes
+    \item[B680-B87F] table commands, left column
+    \item[B880-BA7F] table command values, left column
+    \item[BA80-BC7F] table commands, right column
+    \item[BC80-BE7F] table command values, right column
+    \item[BE80-BE81] mem initialized flag (set to "rb" on init)
+    \item[BE82-BEA1] phrase allocation table
+    \item[BEA2-BEB1] chain allocation table
+    \item[BEB2-BFB1] softsynth params
+    \item[BFB2-BFB2] clock, hours
+    \item[BFB3-BFB3] clock, minutes
+    \item[BFB4-BFB4] tempo
+    \item[BFB5-BFB5] tune setting
+    \item[BFB6-BFB6] total clock, days
+    \item[BFB7-BFB7] total clock, hours
+    \item[BFB8-BFB8] total clock, minutes
+    \item[BFB9-BFB9] total clock
+    \item[BFBA-BFBA] key delay
+    \item[BFBB-BFBB] key repeat
+    \item[BFBC-BFBC] font (for cgb)
+    \item[BFBD-BFBD] sync mode (off/master/slave/...)
+    \item[BFBE-BFBE] colorset
+    \item[BFBF-BFBF] sync parameter (e.g. analog in ticks/step)
+    \item[BFC0-BFC0] clone (0=deep, 1=slim)
+    \item[BFC1-BFC1] file changed?
+    \item[BFC2-BFC2] power save
+    \item[BFC3-BFC3] prelisten
+    \item[BFC4-BFC5] synths locked?
+    \item[BFC6-BFC9] last used instrument/channel
+\end{description}
+
+\section{Bank 2}
+
+\begin{description}
+    \item[A000-AFEF] phrase commands
+    \item[AFF0-BFDF] phrase command values
+\end{description}
+
+\section{Bank 3}
+
+\begin{description}
+    \item[A000-AFFF] waves
+    \item[B000-BFEF] phrase instruments
+    \item[BFF0-BFF1] mem initialized flag (set to "rb" on init)
+    \item[BFF2-BFFE] empty
+    \item[BFFF-BFFF] version byte
+\end{description}
