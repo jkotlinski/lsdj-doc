@@ -7,7 +7,7 @@ LSDj can be synchronized with other devices, so that it is possible to run both 
 
 \section{Game Boy to Game Boy Sync}
 
-It is possible to sync two Game Boys running LSDj with a Nintendo Game Link cable.
+It is possible to sync two Game Boys running LSDj using a Nintendo Game Link cable.
 
 \subsection{Activating LSDj Sync}
 
@@ -15,38 +15,38 @@ Make sure that both Game Boys are turned off. Connect the Game Boys using the li
 
 \subsection{Song Play}
 
-When in song mode, pressing \textsc{start} starts both Game Boys from the same song position. The Game Boy on which you pressed \textsc{start} is the one that sends sync signals; this is indicated by the text \textsc{mstr} (master) appearing in the bottom right corner. The other Game Boy shows the text \textsc{slav} (slave), indicating that it is receiving sync signals.
+When in song mode, pressing \textsc{start} starts both Game Boys from the same song position. The Game Boy on which you pressed \textsc{start} is the one that sends sync signals; this is indicated by the text \textsc{lead} appearing in the right margin. The other Game Boy shows the text \textsc{sync}, indicating that it is receiving sync signals.
 
 \subsection{Live Play}
 
-Pressing \textsc{start} in live mode makes the Game Boy start like usual; also \textsc{mstr}/\textsc{slav} texts indicate that sync signals are sent between the Game Boys. When pressing \textsc{start} on the slave Game Boy, the text \textsc{wait} appears while it is waiting for a phrase start to begin play.
+Pressing \textsc{start} in live mode makes the Game Boy start like usual; also \textsc{lead}/\textsc{sync} texts indicate that sync signals are sent between the Game Boys. When pressing \textsc{start} on the following Game Boy, the text \textsc{wait} appears while it is waiting for a phrase start.
 
 \subsection{Clipboard Transfer}
 
 When two Game Boys are linked and not playing, copying groove, chain, phrase, instr, table or synth data on one Game Boy will transfer the copied data so it can be pasted on the other Game Boy.
 
-\subsection{Switching Master while Playing}
+\subsection{Switching Lead while Playing}
 
-In some cases, it can be useful to switch which Game Boy is the master while playing. Do this by following steps:
+In some cases, it can be useful to switch which Game Boy is the lead while playing. Do this by following steps:
 
 \begin{enumerate}
     \item Set Game Boys to \textsc{lsdj} sync.
     \item Start playing.
-    \item Set slave Game Boy to sync \textsc{off}.
-    \item Stop master Game Boy.
-    \item Set slave Game Boy to sync \textsc{lsdj}. It now becomes the master.
+    \item Set the following Game Boy to sync \textsc{off}.
+    \item Stop lead Game Boy.
+    \item Set the following Game Boy to sync \textsc{lsdj}. It now becomes the lead.
 \end{enumerate}
 
 \section{\textsc{Midi} Sync}
 
 \textsc{Midi} sync requires a special \textsc{Midi} sync cable for Game Boy. For information on how to build a \textsc{Midi} to Game Boy adapter, please refer to the website at \url{http://www.littlesounddj.com}.
 
-Usage: Plug in the sync device before turning on your Game Boy. Then, set LSDj to \textsc{Midi} slave sync mode. Pressing \textsc{start} will now make LSDj wait for and sync with any incoming \textsc{Midi} clock signals. LSDj should use grooves based on 6 ticks.
+Usage: Plug in the sync device before turning on your Game Boy. Then, set LSDj to \textsc{Midi} sync mode. Pressing \textsc{start} will now make LSDj wait for and sync with any incoming \textsc{Midi} clock signals. LSDj should use grooves based on 6 ticks.
 
 \begin{figure}[hbtp]
 \includegraphics[width=1cm]{tip}TIP!
 \begin{itemize}
-        \item \textit{When LSDj is slave, it is possible to temporarily play
+        \item \textit{When LSDj is following, it is possible to temporarily play
 slower or faster by pressing \textsc{a+left/right} on tempo in project screen. This can
 be very useful when being hooked up to some external hardware that has drifted slightly out
 of sync.}
