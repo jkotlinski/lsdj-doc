@@ -258,14 +258,17 @@ The command is relative, meaning that the digits are independently added to the 
 
 \section{T: Tempo}
 
-Change the tick frequency so that the given \textsc{bpm} will be produced. The \textsc{bpm} setting will be accurate only if the active groove has 6 ticks per note step. If the groove has some other number of ticks per note step, the \textsc{bpm} value should be adjusted according to the formula
+Changes the tick rate to match the given beats per minute (BPM) value. The BPM is accurate only if the active groove has 6 ticks per note step. If the groove has some other number of ticks per note step, the BPM value should be adjusted according to the formula
 \begin{math}
 lsdj\_bpm = (desired\_bpm \times ticks\_per\_step)/{6}
 \end{math}.
+\textsc{t28}-\textsc{tff} selects 40-255 BPM, \textsc{t00}-\textsc{t27} selects 256-295 BPM.
 
 \begin{description}
 \item Example:
-\item[T80] set tempo to 128 (\$80) \textsc{bpm}
+\item[T80] set tempo to 128 BPM
+\item[TFF] set tempo to 255 BPM
+\item[T27] set tempo to 295 BPM
 \end{description}
 
 \section{V: Vibrato}

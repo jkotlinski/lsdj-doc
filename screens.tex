@@ -354,8 +354,8 @@ Grooves define the speed by which your phrases and tables are played back. They 
 	\label{fig:groove}
 \end{figure}
 
-To understand grooves, you need to know that the sequencer's time handling is based on an abstract time period called \emph{tick}. The length of a tick varies with the song tempo; at 128 BPM, a tick is approximately 1/50th of a second. In the groove screen, you can specify for how many ticks each note step should be played.
-The groove in figure~\ref{fig:groove} would make the sequencer spend approximately 6/50th of a second on every note step.
+The sequencer is based on a time period called \emph{tick}, which is controlled by song tempo. Ticks are very short: at 125 BPM, each tick lasts only 0.02 seconds. Higher tempo means faster ticks, and the other way around. In the groove screen, you can control for how many ticks phrase or table steps should last.
+The groove in figure~\ref{fig:groove} would make the sequencer spend 6 ticks on every step.
 
 \begin{figure}[htbp]
 	\begin{center}
@@ -365,16 +365,16 @@ The groove in figure~\ref{fig:groove} would make the sequencer spend approximate
 	\label{fig:groove-swing}
 \end{figure}
 
-You can also use the groove screen to create custom rhythms. The groove in figure~\ref{fig:groove-swing} would make the sequencer spend 8/50th of a second on even note steps, and 5/50th of a second on odd note steps, creating a swing. With thoughtful programming, grooves can also be used to create triplets and other complex rhythm structures.
+You can also use grooves to create custom rhythms. The groove in figure~\ref{fig:groove-swing} would make even note steps last 8 ticks, and odd note steps last 5 ticks, creating a swing effect. Grooves can also be used to create triplets and other complex rhythms.
 
-Groove 0 is the default groove for all phrases. If you want to, you can easily switch to another groove using the groove (\textsc{g}) command in the phrase screen.
+Groove 0 is the default groove for all phrases, but it is possible to switch to another groove using the (\textsc{g}) command. This command also works in tables.
 
-You can select the groove you wish to edit by pressing \textsc{b+cursor}.
+In the groove screen, select the groove you wish to edit by pressing \textsc{b+cursor}.
 
 \includegraphics[width=1cm]{tip}TIP!
 \begin{itemize}
-	\item \textit{ Pressing \textsc{a+up/down} will change the swing percentage, while keeping the total number of ticks -- and thus, the resulting song speed -- constant. (Example: Original value is 6/6 = 50\%. Press \textsc{a+up}. Now the value changes to 7/5 = 58\%!) }
-	\item \textit{ If you switch to the groove screen when the cursor is on a \textsc{g} command in the phrase or table screens, Little Sound Dj will display the groove that is selected with the groove command.}
+	\item \textit{ \textsc{A+up/down} changes the swing percentage, while preserving the total number of ticks -- and thus, the resulting song speed -- constant. (Example: Original value is 6/6 = 50\%. Press \textsc{a+up}. Now the value changes to 7/5 = 58\%!) }
+    \item \textit{ If the cursor is on a \textsc{g} command, press \textsc{select+up} to edit that groove. }
 \end{itemize}
 
 \section{Synth Screen}
