@@ -276,11 +276,26 @@ lsdj\_bpm = (desired\_bpm \times ticks\_per\_step)/{6}
 
 \section{V: Vibrato}
 
-Add vibrato. Not available for noise instruments. The vibrato speed and shape depends on the instrument's \textsc{pitch} setting.
+Adds vibrato. Not available for noise instruments. The vibrato speed and shape depends on the instrument's \textsc{pitch} setting.
+The first digit sets speed, second sets depth.
+
+\begin{figure}[hbtp]
+    \begin{tabular}{r|r|r|r|r|r|r|r|r}
+        Depth & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+        \hline
+        Semitones & 0.125 & 0.25 & 0.375 & 0.5 & 0.75 & 1 & 1.5 & 2 \\
+    \end{tabular}
+
+    \begin{tabular}{r|r|r|r|r|r|r|r|r}
+        Depth & 8 & 9 & A & B & C & D & E & F \\
+        \hline
+        Semitones & 2.5 & 3 & 3.5 & 4 & 5 & 6 & 7 & 8 \\
+    \end{tabular}
+\end{figure}
 
 \begin{description}
 \item Example:
-\item[V42] period=4, depth=2
+\item[V42] speed=4, depth=0.375 semitones
 \item[V00] reset vibrato
 \end{description}
 
