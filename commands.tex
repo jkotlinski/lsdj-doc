@@ -226,15 +226,18 @@ Example:
 
 Applies S command with the given value every tick.
 
-\section{R: Retrig the Latest Played Note}
+\section{R: Retrig/Resync}
 
-Play the latest played note again. The first digit modulates the volume (0=no change, 1-7=increase, 8-\$F=decrease). The second digit sets a period for the retriggering, zero being the fastest and $E the slowest. Period $F means only retrig once.
+Retrig plays the latest played note again. The first digit modulates the volume (0=no change, 1-7=increase, 9-\$F=decrease). The second digit sets retrig rate, zero being the fastest and $E the slowest, and $F meaning only retrig once.
+
+R8x means resync: With this option, the sound generator restarts at a very high rate. The pulse channels have a special quirk which makes resync slow down the sound, allowing it to go half an octave deeper.
 
 \begin{description}
 \item Example:
-\item[R00] very fast retriggering
-\item[R0F] retrigger once
-\item[RF3] medium speed retriggering, decreasing amplitude (echo effect)
+\item[R00] retrig the sound every tick
+\item[R0F] retrig once
+\item[R80] restart the sound generator at 360 Hz
+\item[RF3] retrig the sound every fourth tick, decreasing amplitude (echo effect)
 \end{description}
 
 \section{S: Sweep/Shape}
