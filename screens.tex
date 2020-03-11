@@ -1,36 +1,40 @@
 \chapter{The Screens}
-As stated before, Little Sound Dj has several screens, laid out in a screen map of size \begin{math} 5 \times 3 \end{math}. You can
-navigate between the screens by pressing \textsc{select+cursor}.
+Little Sound Dj has nine screens, laid out in a \begin{math} 5 \times 2 \end{math} screen map.
+
 \section{Screen Map}
+
 \begin{figure}[htbp]
 \centering
 \begin{tabular}{|c|c|c|c|c|l}
-
-	\cline{0-4}
-	\multicolumn{2}{|c|}{ } & & & &
-	\\
-	\multicolumn{2}{|c|}{Project} & Wave & Synth & &
-	\\
-	\multicolumn{2}{|c|}{ } & & & &
-	\\
 	\cline{0-3}
+    & & & \\
+    Project & Groove & Synth & Wave \\
+    & & & \\
+	\cline{0-4}
 	& & & & & \\
 	Song & Chain & Phrase & Instr. & Table  & \begin{math} \leftarrow \end{math} Main Row \\
 	& & & & & \\
 	\cline{0-4}
-	\multicolumn{5}{|c|}{} \\
-	\multicolumn{5}{|c|}{Groove} \\
-	\multicolumn{5}{|c|}{} \\
-	\cline{0-4}
 \end{tabular}
-%\caption{Screen Map.}
 \end{figure}
 
-The song, chain and phrase screens are used for sequencing and arranging. The wave, synth,
-instrument and table screens are used for sound programming. \footnote{There are also three hidden
+The song, chain and phrase screens are used for composing music. The wave, synth,
+instrument and table screens are used for making sounds.
+Project screen contains project settings, and groove screen controls sequencer timing.
+\footnote{There are also three hidden
 screens, not shown on the map: The file, word and help screens. We will get back to these later.}
 
-The remaining screens, project and groove, have more general purposes. The bulk of your activities will however probably be in the so-called "main row," in the middle of the map, as that's where the composing is done.
+You will likely spend most time in the main row, as that is where the composing is done.
+
+\section{Moving between Screens}
+
+Move between the screens using \textsc{select+cursor}.
+
+The upper and lower screen rows are controlled independently. That means, if you move
+left or right on one row, the position of the other row will stay the same.
+There are some exceptions made for convenience.
+As an example, pressing \textsc{select+up} in song screen always goes to the project
+screen.
 
 \section{Starting and Stopping}
 
@@ -39,7 +43,7 @@ channels. When pressing \textsc{start} in the other screens, Little Sound Dj wil
 channel that's indicated in the three-letter field at the right edge of the screen (\textsc{pu1}, \textsc{pu2}, \textsc{wav} or \textsc{noi}).
 
 If you want to start playing all four channels from some other screen than the song screen,
-you can do that by pressing \textsc{select+start}.
+press \textsc{select+start}.
 
 \section{Song Screen}
 
@@ -374,7 +378,7 @@ In the groove screen, select the groove you wish to edit by pressing \textsc{b+c
 \includegraphics[width=1cm]{tip}TIP!
 \begin{itemize}
 	\item \textit{ \textsc{A+up/down} changes the swing percentage, while preserving the total number of ticks -- and thus, the resulting song speed -- constant. (Example: Original value is 6/6 = 50\%. Press \textsc{a+up}. Now the value changes to 7/5 = 58\%!) }
-    \item \textit{ If the cursor is on a \textsc{g} command, press \textsc{select+up} to edit that groove. }
+    \item \textit{ Press \textsc{select+up} on \textsc{g} commands to edit that groove. }
 \end{itemize}
 
 \section{Synth Screen}
