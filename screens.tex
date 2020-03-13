@@ -159,13 +159,13 @@ There are five types of instruments available:
 
 You can change the instrument type by going to the type row and pressing \textsc{a+cursor}.
 
-Remember that instruments don't automatically play in the right channel. For example, if you want to use a kit instrument to play drum samples, you have to do the following:
+Remember that instruments don't automatically play in the right channel. For example, if you want to use a kit instrument to play drum samples, do the following:
 
 \begin{enumerate}
-\item Go to the song screen, move cursor to the wave column, and insert a new chain by tapping \textsc{a} twice.
+\item Go to the song screen, move cursor to the wave column, and insert a new chain by tapping \textsc{a} twice on an empty step.
 \item	Edit the chain by pressing \textsc{select+right}.
 \item	Insert a new phrase by tapping \textsc{a} twice.
-\item	Edit the phrase by pressing \textsc{select+right}. Now, you have a new phrase that is mapped to the wave channel.
+\item	Edit the phrase by pressing \textsc{select+right}. Now, you have a new phrase placed in the wave channel.
 \item	Create a new instrument by moving the cursor to the instrument column and tapping \textsc{a} twice.
 \item	Press \textsc{select+right} to edit the instrument.
 \item	Change the instrument type to \textsc{kit}.
@@ -208,11 +208,20 @@ These parameters are used in most instrument types.
 	\label{fig:instr-pulse}
 \end{figure}
 
+\label{pulse-adsr}
 \begin{description}
-	\item[\textsc{envelope}] The first digit sets initial amplitude (0-\$F); the second digit sets release (0, 8: none, 1-7: decrease amplitude, 9-\$F: increase amplitude).
-	\item[\textsc{wave}] Choose the wave type to be used.
+	\item[\textsc{adsr}] Three amplitude control values. For each value, first digit sets amplitude, and the second digit sets the speed to rise or fall to the next amplitude. Speed 1 is fast, 7 is slow, 0 means hold. As an example, \textsc{adsr 31F7A0} creates an envelope 
+ with fast attack from amplitude 3 to F, slow decay to A, then infinite sustain, as shown in figure~\ref{fig:adsrexample}.
+	\item[\textsc{wave}] Wave type.
 	\item[\textsc{sweep}] Modulate the frequency. This only works on pulse channel 1. See Sweep/Shape (\textsc{s}) command documentation for further information.
 \end{description}
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=10cm]{adsrexample} 
+\caption{Amplitude envelope example. ADSR=31F7A0.}
+\label{fig:adsrexample}
+\end{figure}
 
 The detune settings create interesting phase effects when the same phrase is played on both pulse channels:
 
@@ -281,8 +290,8 @@ The wave instrument plays back synth sounds generated in the \textsc{synth} scre
 \end{figure}
 
 \begin{description}
-	\item[\textsc{envelope}] First digit is initial amplitude (0-\$F); second digit is release (0, 8: none, 1-7: decrease amplitude, 9-\$F: increase amplitude).
-    \item[\textsc{shape}] Noise generator control. The first digit changes pitch by octave, the second digit divides the frequency. Set the second digit to 0-7 for periodic noise, 8-\$F for random noise.
+	\item[\textsc{adsr}] See description of pulse ADSR (\ref{pulse-adsr}).
+	\item[\textsc{shape}] Noise generator control. The first digit changes pitch by octave, the second digit divides the frequency. Set the second digit to 0-7 for periodic noise, 8-\$F for random noise.
         For an in-depth technical explanation, refer to \href{https://google.com\&q=gbsound.txt}{gbsound.txt}.
 	\item[\textsc{s mode}] When set to \textsc{free}, noise changing commands can randomly\footnotemark mute the sound. When set to \textsc{stable}, commands are limited so that sound will never be muted by accident.
 \footnotetext{There is a 0.4\% risk that the sound gets muted when a shape that ends with digit 8-F
