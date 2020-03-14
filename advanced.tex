@@ -142,4 +142,28 @@ Hi-hats are created using the noise channel. Use a shape value of \$FF for selec
 For adding that extra punch to snares, you can use a table that uses the transpose column to change the noise shape rapidly. (See figure~\ref{fig:table-snare}.)
 
 
+\begin{figure}[hbtp]
+	\centering
+	\subfloat[Bass Drum Instrument]{
+		\fbox{\includegraphics{instr-wavekick}}
+	}
+	\qquad
+	\subfloat[Bass Drum Synth]{
+	\fbox{\includegraphics{synth-wavekick}}
+	}
 
+	\subfloat[Bass Drum Wave]{
+		\fbox{\includegraphics{wave-wavekick}}
+	}
+	\qquad
+	\subfloat[Bass Drum Table]{
+	\fbox{\includegraphics{table-wavekick}}
+	}
+
+	\caption{Wave Channel Bass Drum}
+	\label{fig:wavekick}
+\end{figure}
+
+\subsection{Bass Drum (Wave)}
+
+For a more advance bass drum technique, you can make one by using the synthesizer in the wave channel. Set the \textsc{pitch} to \textsc{drum} by pressing \textsc{a+up}, and set \textsc{transp} to \textsc{off}. Set synth \textsc{play} to \textsc{manual}. On the synth screen, choose the triangle signal, and set \textsc{volume} to \$30. Set a table for the instrument. On line 0 of the table use a fast P command such as \$C0. On line 1, put \$80 in the \textsc{tsp} column and use an L command with a value such as \$30. This will transpose the bass drum to the lowest possible note without wrapping to a higher pitch.  Feel free to experiment with different synth parameters or different values for the P and L commands to shape the sound of the kick, as well as playing the instrument at note C-5, C-6, or above. (See figure~\ref{fig:wavekick}.)
