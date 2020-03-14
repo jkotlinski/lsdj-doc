@@ -17,7 +17,7 @@ it contains material like tutorials, tips and tricks, and
 hardware related DIY projects. Also, the Facebook group
 at \url{https://www.facebook.com/groups/LittleSoundDJ/} is useful for getting in touch
 with other users.
-If you have questions or bug reports, please e-mail
+If you have questions, ideas or bug reports, please e-mail
 \href{mailto:info@littlesounddj.com}{info@littlesounddj.com}.
 
 Happy tracking!
@@ -61,7 +61,7 @@ In this documentation, key presses are marked up in this fashion:
 \end{description}
 
 \section{Navigating the Program}
-After starting up LSDj, you should be facing a screen like the one in figure~\ref{fig:song}.
+When starting LSDj, you will see the screen in figure~\ref{fig:song}.
 
 \begin{figure}[hbtp]
 \centering
@@ -83,23 +83,20 @@ can move between the channels using the D-pad.
 \label{fig:map}
 \end{figure}
 
-Little Sound Dj uses nine screens, laid out on a \begin{math} 5 \times 2 \end{math} map displayed in the
+Little Sound Dj has nine screens, laid out on a \begin{math} 5 \times 2 \end{math} map displayed in the
 bottom right of the screen (figure~\ref{fig:map}). You can navigate between the different screens by
 holding \textsc{select} and pressing the D-pad.
 
-The most useful screens are placed in the bottom row, ordered by level of detail. The leftmost song screen
-gives an overview over the entire song, whereas the rightmost table screen is used for detailed sound programming. 
-
+The most useful screens are placed in the bottom row, ordered by level of detail. 
 The song, chain and phrase screens are used for sequencing, and work together in a tree-structure
-fashion. The phrase screen is a 16-step note sequencer.
-The chain screen is a 16-step sequencer for entering sequences of phrases to
-be played back. The song screen is a 256 step long sequencer for entering sequences of
-chains to be played back.
+fashion.  The song contains chains, each chain contains phrases, and each phrase contains notes.
+They are followed by the instrument and table screens, which are used to create sounds.
 
 \section{Making Your First Sounds}
-Navigate to the song screen, and move the cursor to the \textsc{pu1} column. Tap the \textsc{a} button
-to insert a new chain. The digit 00 should appear at the cursor. You can now edit chain 0 by pressing \textsc{select+right} and entering the chain screen. There, tap \textsc{a} to insert a new phrase, then press \textsc{select+right} to go to the
-phrase screen.
+Navigate to the song screen, and move the cursor to the \textsc{pu1} column. Tap the \textsc{a} button,
+and a new chain ``00'' will appear.
+Edit the chain by pressing \textsc{select+right} to enter the chain screen.
+There, tap \textsc{a} to insert a new phrase, then press \textsc{select+right} to go to the phrase screen.
 
 \begin{figure}[hbtp]
 \centering
@@ -110,13 +107,13 @@ phrase screen.
 
 In the phrase screen, you can enter notes to be played back. Move the cursor to the note
 column and press \textsc{a} to enter a note. The text C-2 will appear: C being the note, and 2 the
-octave. Press \textsc{start} to play back the phrase. Notice how the phrase is played back from
+octave. Press \textsc{start} to play the phrase. Notice how the phrase is played back from
 top to bottom. You can change the note by holding \textsc{a} and pressing the
 D-pad. \textsc{a+left/right} changes the note, and \textsc{a+up/down} changes octave.
 
-You can now try to move the cursor up and down and insert more notes in other positions.
-To delete a note, press \textsc{a} while holding \textsc{b}. When you have finished listening, press
-\textsc{start} again to stop the phrase.
+Now, try to move the cursor and insert notes on other steps.
+To delete a note, press \textsc{a} while holding \textsc{b}.
+When you have finished listening, press \textsc{start} again to stop the phrase.
 
 The clean pulse sound might get dull after while. Let's move on to the instrument
 screen by pressing \textsc{select+right}.
@@ -128,10 +125,10 @@ screen by pressing \textsc{select+right}.
 \label{fig:instr}
 \end{figure}
 
-In the instrument screen, we can make the sound a little bit more interesting. Try to change
-the \textsc{adsr} and \textsc{wave} fields by moving the cursor there and pressing \textsc{a+left/right}. Try
-to modify the \textsc{adsr} setting from \texttt{A0} to \texttt{A3}. Now, press \textsc{start} again to hear any
-change in sound. The sound should now be more bouncy.
+In the instrument screen, we can make the sound a little bit more interesting.
+Try changing the \textsc{adsr} and \textsc{wave} fields by moving the cursor there and pressing \textsc{a+left/right}.
+As an example, setting the \textsc{adsr} setting to \texttt{A3} should make the sound more bouncy.
+Press \textsc{start} again to hear the changes as you make them!
 
 The \textsc{type} field sets the instrument type. Instrument types are specific for
 channels -- \textsc{pulse} instruments should only be played back in the pulse channels, \textsc{wave} and \textsc{kit}
@@ -140,7 +137,7 @@ instruments in the wave channel, and \textsc{noise} instruments in the noise cha
 Let's try out the sampled drum kits. Now, we have to change channel to the wave channel.
 Go back to the song screen, move the cursor over to the wave channel, and create a new
 chain and a new phrase by tapping \textsc{a}.
-Enter a note by tapping \textsc{a}, and press \textsc{select+right} to edit the instrument.
+Enter a note by tapping \textsc{a}, then \textsc{select+right} to edit the instrument.
 Change the instrument type to \textsc{kit} by pressing \textsc{a+right} on the type field,
 then go back to the phrase screen. Now, you should be able to enter drum sounds the same way
 you entered notes before.
