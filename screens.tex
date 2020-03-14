@@ -81,8 +81,8 @@ The number of rows in the song screen is limited to 255 (\$00-\$FE).
 Chains are used for stringing phrases together, thus creating a unit built out of many
 phrases. A chain can represent a longer rhythm block, a melody or a bass line.
 
-The chain screen contains two columns. The first column contains the list of phrases that are
-to be stringed together, while the second column transposes the phrase on the same row.
+The chain screen contains two columns. The first column contains the list of phrases
+to play, while the second column transposes the phrase on the same row.
 
 \begin{figure}[hbtp]
 \centering
@@ -94,14 +94,14 @@ to be stringed together, while the second column transposes the phrase on the sa
 Example:
 The chain in figure~\ref{fig:chainexample} would play phrase 3, adding 5 semitones to each note, and then play each of the phrases 4, 5, 6 without transposing.
 
-To add a phrase to the chain, move the cursor to an empty step and press \textsc{a}. If you want to
-insert a new phrase, press \textsc{a} twice. To edit a phrase, move the cursor to the phrase number
+To add a phrase to the chain, move the cursor to an empty step and press \textsc{a}. To
+insert a new phrase, press \textsc{a} twice on an empty step. To edit a phrase, move the cursor to the phrase number
 and press \textsc{select+right}.
 
 When editing a chain, you can go to the chain in a neighboring channel by pressing \textsc{b+left/right}. It is also possible to go to the next or previous chain in the song screen by
 pressing \textsc{b+up/down}.
 
-The different channels all share the same set of chains; that is, no chain is ever assigned to a
+The different channels all share the same set of chains; that is, no chain is ever locked to a
 specific channel. The number of chains is limited to 128 (\$00-\$7F).
 
 \section{Phrase Screen}
@@ -511,8 +511,8 @@ The project screen (figure~\ref{fig:project}) contains settings that affect the 
 
 \begin{description}
 	\item[\textsc{tempo}] Change the tempo. It is possible to set a new tempo either by pressing
-\textsc{a+cursor}, or by tapping the \textsc{a} button in pace with the desired tempo. When being
-slave in sync mode, it is possible to temporarily play a little faster or slower by pressing \textsc{a+left/right}.
+\textsc{a+cursor}, or by tapping the \textsc{a} button in pace with the desired tempo. When being a
+follower in sync mode, it is possible to temporarily play a little faster or slower by pressing \textsc{a+left/right}.
 	\item[\textsc{transpose}] Adjust the pitch of the pulse and wave instruments, by a given number of semitones.
 	\item[\textsc{sync}] Activate link-up over the serial port. (Read more about this in chapter \ref{sync-chapter}!)
 
@@ -589,7 +589,7 @@ Various useful data is displayed in the screen border.
 
 \begin{enumerate}
 \item Screen title. Shows what is being edited.
-\item The channel being edited. Always the same as selected song screen column.
+\item The channel being edited, that is, the selected song screen column.
 \item Chain position being edited.
 \item Current tempo in beats per minute (BPM).
 \item Shows what is being played on the channels. \textsc{Mute} appears when pressing \textsc{b+select} or \textsc{b+start}.
