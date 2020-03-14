@@ -32,9 +32,8 @@ Move between the screens using \textsc{select+cursor}.
 
 The upper and lower screen rows are controlled independently. That means, if you move
 left or right on one row, the position of the other row will stay the same.
-There are some exceptions made for convenience.
-As an example, pressing \textsc{select+up} in song screen always goes to the project
-screen.
+Some shortcuts exist for convenience: As an example, pressing \textsc{select+up}
+in song screen always goes to the project screen.
 
 \section{Starting and Stopping}
 
@@ -42,7 +41,7 @@ When pressing \textsc{start} in the song screen, Little Sound Dj will always try
 channels. When pressing \textsc{start} in the other screens, Little Sound Dj will only try to play the
 channel that's indicated in the three-letter field at the right edge of the screen (\textsc{pu1}, \textsc{pu2}, \textsc{wav} or \textsc{noi}).
 
-If you want to start playing all four channels from some other screen than the song screen,
+To start playing all four channels from some other screen than the song screen,
 press \textsc{select+start}.
 
 \section{Song Screen}
@@ -58,31 +57,26 @@ The song screen
 %(figure~\ref{fig:song})
 is the highest level of the sequencer. This is where you arrange your songs.
 
-The screen contains four columns, one for each channel. The columns contain lists of chains, which will be played from top to down. Different chains are used for different channels.
+The screen contains four columns, one for each channel. The columns contain lists of chains to be played from top to down. Different chains are used for different channels.
 
 To insert a chain, move the cursor to an empty step and press \textsc{a}. If you want to add a new
 chain, press \textsc{a} twice. To edit a chain, move the cursor to the chain number and press
-\textsc{select+right}. To remove a chain, you can either press \textsc{a} twice or
-press \textsc{b+a}.
+\textsc{select+right}. To remove a chain, press \textsc{b+a}.
 
-To start or stop playing all channels in the song screen, press \textsc{start}. To instantly re-start all channels in the song screen, press \textsc{select+start} (this has the same effect as pressing \textsc{start, start} quickly).
+To start or stop playing all channels in the song screen, press \textsc{start}. To instantly re-start all channels in the song screen, press \textsc{select+start}.
 
 \includegraphics[width=1cm]{tip}TIP!
 \begin{itemize}
 \item \textit{Pull up down-below chains by pressing \textsc{b+a} on an empty step.}
 \item \textit{\textsc{B+up/down} does page up/down.}
 \item \textit{Add or remove song screen bookmarks by tapping \textsc{b} three times \textsc{(b, b, b)}.}
-%	\marginpar{\includegraphics[width=1cm]{tip}TIP!}
 \end{itemize}
 
-The number of rows in the song screen is limited to 255 (\$00-\$FE).
-
 \section{Chain Screen}
-Chains are used for stringing phrases together, thus creating a unit built out of many
-phrases. A chain can represent a longer rhythm block, a melody or a bass line.
+Chains are lists of phrases to be played in order. A chain can represent for example a melody or a bass line.
 
 The chain screen contains two columns. The first column contains the list of phrases
-to play, while the second column transposes the phrase on the same row.
+to play, while the second column transposes the phrase to the left.
 
 \begin{figure}[hbtp]
 \centering
@@ -102,7 +96,7 @@ When editing a chain, you can go to the chain in a neighboring channel by pressi
 pressing \textsc{b+up/down}.
 
 The different channels all share the same set of chains; that is, no chain is ever locked to a
-specific channel. The number of chains is limited to 128 (\$00-\$7F).
+particular channel.
 
 \section{Phrase Screen}
 
@@ -150,11 +144,11 @@ There are 255 phrases (\$00-\$FE). The number of the phrase being edited is show
 There are five types of instruments available:
 
 \begin{description}
-\item[\textsc{pulse}] This instrument type produces pulse waves, and is used in pulse channels 1 and 2.
-\item[\textsc{wave}] This instrument type can play back waves synthesized using the synth screen. It is used in the wave channel.
-\item[\textsc{kit}] This instrument type plays sampled kits, stored in \textsc{rom}. (The samples are stored in 4 bits, 11,468 kHz.) It is used in the wave channel.
-\item[\textsc{noise}] This instrument type produces filtered noise, and is used in the noise channel.
-\item[\textsc{speech}] This instrument is locked to instrument number \$40, and is used for programming speech. For learning how to generate speech, please read chapter \ref{speech-chapter}.
+\item[\textsc{pulse}] Makes pulse waves. Used in pulse channels 1 and 2.
+\item[\textsc{wave}] Plays back waves synthesized using the synth screen. Used in the wave channel.
+\item[\textsc{kit}] Plays back samples from ROM. Used in the wave channel.
+\item[\textsc{noise}] Makes filtered noise. Used in the noise channel.
+\item[\textsc{speech}] This instrument is locked to instrument number \$40, and is used for speech programming. Learn all about it in chapter \ref{speech-chapter}!
 \end{description}
 
 You can change the instrument type by going to the type row and pressing \textsc{a+cursor}.
