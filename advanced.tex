@@ -125,9 +125,7 @@ Creating good-sounding drum instruments without using the sampled drum kits migh
 
 \subsection{Bass Drum}
 
-Use pulse channel 1 for creating bass drum sounds. The amplitude envelope should have a strong attack and fast decay - try setting it to \$C1. Wave should be 50-50 high/low, even though other waves can be used for making the instrument sound more distorted. The sweep value is maybe the most important part in creating a successful kick instrument. It should have a high initial frequency and decay. Try setting it to a value of \$E3, and playing the instrument at note C-6. For a more snappy sounding kick, try experimenting with the envelope and length parameters. Set \textsc{tuning} to \textsc{fix} or \textsc{drm} to prevent transposes from changing the pitch.
-
-It is also possible to use the noise or wave channel for creating bass drums. Feel free to experiment around.
+The easiest way to create a bass drum is by using pulse channel 1. The amplitude envelope should have a strong attack and fast decay -- try setting \textsc{adsr} to \$C1. \textsc{Wave} is typically 50-50 high/low, even though other waves can be used for a more distorted sound. \textsc{Sweep} should have high initial frequency and fast decay; try setting it to \$E3, and play the instrument at note C-6. For a snappier kick, experiment with \textsc{adsr} and \textsc{length} parameters. Set \textsc{transpose} to \textsc{off} to prevent chain transposes from changing the pitch.
 
 \subsection{Snare Drum}
 
@@ -139,8 +137,7 @@ Hi-hats are created using the noise channel. Use a shape value of \$FF for selec
 
 \subsection{Taking Advantage of Tables}
 
-For adding that extra punch to snares, you can use a table that uses the transpose column to change the noise shape rapidly. (See figure~\ref{fig:table-snare}.)
-
+For adding that extra punch to snares, use the table transpose column to change the noise shape rapidly. (See figure~\ref{fig:table-snare}.)
 
 \begin{figure}[hbtp]
 	\centering
@@ -164,6 +161,6 @@ For adding that extra punch to snares, you can use a table that uses the transpo
 	\label{fig:wavekick}
 \end{figure}
 
-\subsection{Bass Drum (Wave)}
+\subsection{Wave Bass Drum}
 
-For a more advance bass drum technique, you can make one by using the synthesizer in the wave channel. Set the \textsc{pitch} to \textsc{drum} by pressing \textsc{a+up}, and set \textsc{transp} to \textsc{off}. Set synth \textsc{play} to \textsc{manual}. On the synth screen, choose the triangle signal, and set \textsc{volume} to \$30. Set a table for the instrument. On line 0 of the table use a fast P command such as \$C0. On line 1, put \$80 in the \textsc{tsp} column and use an L command with a value such as \$30. This will transpose the bass drum to the lowest possible note without wrapping to a higher pitch.  Feel free to experiment with different synth parameters or different values for the P and L commands to shape the sound of the kick, as well as playing the instrument at note C-5, C-6, or above. (See figure~\ref{fig:wavekick}.)
+To get a truly outstanding bass drum sound, use the synthesizer in the wave channel. Set the \textsc{pitch} to \textsc{drum} by pressing \textsc{a+up}, and set \textsc{transp} to \textsc{off}. On the synth screen, choose the triangle signal, and set \textsc{volume} to \$30. Set a table for the instrument. On step 0 of the table, use a fast P command such as \$C0. On line 1, put \$80 in the \textsc{tsp} column and use an L command with a value such as \$30. This will transpose the bass drum to the lowest possible note without wrapping to a higher pitch.  Feel free to experiment with different synth parameters or different values for the P and L commands to shape the sound of the kick, as well as playing the instrument at note C-5, C-6, or above. (See figure~\ref{fig:wavekick}.)
