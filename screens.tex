@@ -260,16 +260,16 @@ The wave instrument plays back synth sounds generated in the \textsc{synth} scre
 	\item[\textsc{kit}] Choose the kits to use. The first kit will be used in the left note column in the phrase screen; the second kit will be used in the right note column in the phrase screen.
     \item[\textsc{volume}] Set amplitude (0=0\%, 1=25\%, 2=50\%, 3=100\%) and output (left/right/both/off).
 	\item[\textsc{finetune}] Pitch shift.
-	\item[\textsc{offset}] Set the start loop point. If \textsc{loop} is set to \textsc{off}, this value can be used for skipping the initial part of a sound.
-	\item[\textsc{len}] Set the sound length. (\textsc{aut}=always play the sample to its end.)
+	\item[\textsc{offset}] Set the start loop point. If \textsc{loop} is \textsc{off}, this value can be used for skipping the initial part of a sound.
+	\item[\textsc{len}] Sound length. (\textsc{aut}=play the sample to its end.)
 	\item[\textsc{loop}] Loop the sample. (\textsc{off}=don't loop, \textsc{on}=loop sound and start playing from custom offset, \textsc{atk}=loop sample and start playing from the beginning.)
-	\item[\textsc{speed}] Select full speed or half speed.
-	\item[\textsc{dist}] Select the algorithm that should be used when two kits are mixed together. \textsc{clip} is the default type. \textsc{shape} and \textsc{shape2} sound similar to \textsc{clip}, but with more high frequencies and less bass. \textsc{wrap} can be used to add some interesting digital distortion. When pressing \textsc{a+(left, left)} while \textsc{clip} value is selected, the program will jump out of range and play back sound from raw memory when clipping.
+	\item[\textsc{speed}] Full speed or half speed.
+	\item[\textsc{dist}] Selects what to do when the signal overshoots while mixing two kits. \textsc{clip} is the default: Hard clamp the signal to the allowed 0-\$F range. \textsc{shape} and \textsc{shape2} are similar to \textsc{clip}, but a bit softer, preserving the sounds better at the cost of not being as loud. \textsc{wrap} can be used to add some interesting digital distortion. By pressing \textsc{a+(left, left)} while \textsc{clip} is selected, the value will jump out of range and play back sound from raw memory when the signal overshoots.
 \end{description}
 
 \includegraphics[width=1cm]{tip}TIP!
 \begin{itemize}
-	\item \textit{For those running LSDj on emulator or with backup gear, there is a Java application for replacing the original sample kits available at} \url{http://littlesounddj.com/lsd/latest/lsd-patcher/}.
+\item \textit{To replace the default sample kits, use the lsdpatcher program!} \url{http://littlesounddj.com/lsd/latest/lsd-patcher/}
 \end{itemize}
 
 \subsection{Noise Instrument Parameters}
@@ -286,7 +286,7 @@ The wave instrument plays back synth sounds generated in the \textsc{synth} scre
 \begin{description}
 	\item[\textsc{adsr}] See description of pulse ADSR (\ref{pulse-adsr}).
 	\item[\textsc{shape}] Noise generator control. The first digit changes pitch by octave, the second digit divides the frequency. Set the second digit to 0-7 for periodic noise, 8-\$F for random noise.
-        For an in-depth technical explanation, refer to \href{https://google.com\&q=gbsound.txt}{gbsound.txt}.
+        An in-depth technical explanation of the noise generator can be found in \href{http://www.devrs.com/gb/files/hosted/GBSOUND.txt}{gbsound.txt}.
 	\item[\textsc{s mode}] When set to \textsc{free}, noise changing commands can randomly\footnotemark mute the sound. When set to \textsc{stable}, commands are limited so that sound will never be muted by accident.
 \footnotetext{There is a 0.4\% risk that the sound gets muted when a shape that ends with digit 8-F
         is changed so that it ends with digit 0-7.}
@@ -521,8 +521,15 @@ follower in sync mode, it is possible to temporarily play a little faster or slo
 	\item[\textsc{load/save song}] Enter file manager. \footnote{The file manager is only available for cartridges that have 1 Mbit SRAM or more. In case your cartridge doesn't have 1 Mbit SRAM, this button will be replaced with a \textsc{reset memory} button.}
 \end{description}
 
-This screen also contains two clocks. The \textsc{work time} clock displays the time Little Sound Dj has been used since the last memory reset, in hours and minutes. When playing, the clock
-is replaced by a \textsc{play time} clock, which shows for how long the song has been playing. The \textsc{total} clock displays the time Little Sound Dj has been used in total, in days, hours and minutes.
+The project screen also has two clocks.
+The \textsc{work time} clock displays the time spent making the current song, in hours and minutes.
+When playing, it is replaced by the \textsc{play time} clock, which shows for how long the song has been playing.
+The \textsc{total} clock shows how long the cartridge has been used in total, in days, hours and minutes.
+
+\includegraphics[width=1cm]{tip}TIP!
+\begin{itemize}
+\item \textit{To replace the default fonts and palettes, use the lsdpatcher program!} \url{http://littlesounddj.com/lsd/latest/lsd-patcher/}
+\end{itemize}
 
 \subsection{Total Memory Reset}
 \label{total-memory-reset}
