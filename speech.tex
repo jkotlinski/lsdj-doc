@@ -3,19 +3,9 @@
 
 \section{Introduction}
 
-Little Sound Dj contains fifty-nine discrete speech sounds (called allophones), stored in the first four kit banks. By combining these sounds, it is possible to create any English word or phrase.
+Little Sound Dj has 59 speech sounds, called allophones. By combining these sounds, it is possible to create any English word or phrase.
 
-\section{Linguistics}
-
-A few basic linguistic concepts will help you create your own library of words. First, there is no one-to-one correspondence between written letters and speech sounds; secondly, speech sounds are acoustically different depending on their position within a word.
-
-The first problem compares to the problem that a child encounters when it learns to read. Each sound in a language may be represented by more than one letter, and conversely, each letter may represent more than one sound. Because of these spelling irregularities, it is necessary to think in terms of sounds, not letters, when using allophones.
-
-The second thing to consider is that the acoustic signal of a speech sound may differ depending on its position within a word. For example, the initial K sound in coop will be acoustically different from the K's in keep and speak.
-
-\section{Programming Words}
-
-Little Sound Dj has a special speech instrument. It is locked to instrument number \$40 and can be used in the wave channel. It contains a set of 42 words, mapped out from note C-2 to note F-5.
+The speech instrument is locked to instrument number \$40 and can only be used in the wave channel. It contains 42 words, mapped out from note C-2 to note F-5.
 
 \begin{figure}[htpb]
 	\begin{center}
@@ -32,11 +22,16 @@ Little Sound Dj has a special speech instrument. It is locked to instrument numb
 	\label{fig:word}
 \end{figure}
 
-		If you want to edit a word, press \textsc{select+right} to get to the word screen. It has two columns; the left column contains the allophones to be played, the right column sets duration. The word in figure~\ref{fig:word} is programmed to say "Little Sound Dj."
+To edit a word, press \textsc{select+right} to get to the word screen. The left column contains the allophones to be played, the right column sets their duration. The word in figure~\ref{fig:word} is supposed to say ``Little Sound Dj.''
 
-		In order to make things easy to remember, it is possible to rename the words by tapping A in the speech instrument screen. If you want to, it is also possible to cut and paste words in the speech instrument screen.
+To make the words easy to remember, rename them by tapping A in the speech instrument screen.
 
-\section{Guidelines for Using the Allophones}
+\section{Allophones}
+
+\begin{itemize}
+\item When selecting allophones, care about how they sound, not how they are spelled.
+\item A sound may be different depending on its position within a word. For example, the K in ``coop'' will sound different from the K's in ``keep'' and ``speak''.
+\end{itemize}
 
 Allophones marked with * loop indefinitely.
 
