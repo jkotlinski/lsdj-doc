@@ -1,12 +1,11 @@
 \chapter{Commands}
 
-Commands can be used in phrases and tables for altering the sound. There is a lot of power hidden in the commands, so it is suggested that you skim through this chapter at least once to get an idea of what they can do for you.
+Commands can be used to do all sorts of things in phrases and tables. It is a good idea to skim through this chapter at least once, to get an idea of what they can do.
 
 \includegraphics[width=1cm]{tip}TIP!
 \begin{itemize}
-        \item \textit{Tapping \textsc{a} on a command letter will display a scrolling help text in the top of the screen. \textsc{a+cursor} can then be used to browse through the existing commands. The text can be paused by holding \textsc{select}.}
-	%\marginpar{\includegraphics[width=1cm]{tip}TIP!}
-	\end{itemize}
+        \item \textit{Tapping \textsc{a,a} on a command shows a scrolling help text in the top of the screen. \textsc{A+l/r} can then be used to browse through the commands. Pause the scrolling text by holding \textsc{select}.}
+\end{itemize}
 
 \section{A: Table Start/Stop}
 
@@ -51,7 +50,7 @@ sets destination row.
 \subsection{For Pulse and Wave Instruments:}
 
 \label{command-chord}
-Produce chords by doing a simple arpeggio that extends the base note with the given semitones.
+Runs an arpeggio that extends the base note with the given semitones. The speed may be slowed down using \textsc{cmd/rate} in instrument screen.
 
 \begin{description}
 \item[C37] plays a minor chord: 0, 3, 7, 0, 3, 7, 0, 3, 7, \ldots
@@ -71,8 +70,6 @@ Applies S command with the given value every second tick.
 Delay the triggering of a note with the given number of ticks.
 
 \section{E: Amplitude Envelope}
-
-This command functions in two different ways, depending on which instrument type it is used on.
 
 \subsection{For Pulse and Noise Instruments}
 The first value digit sets the initial amplitude (0=min, \$F=max); the second digit sets the release (0,8: no change, 1-7: decrease, 9-\$F: increase).
@@ -95,11 +92,11 @@ See section~\ref{detune}.
 Modifies the sample position. \$00-\$7F steps forward, \$80-\$FF steps back.
 
 \subsection{For Wave Instruments:}
-Change the wave frame that's being played on the wave channel. This command is relative, meaning that the command value will be added to the current frame number. This can be used for playing through synth sounds manually.
+Change the wave frame being played on the wave channel. This command is relative, meaning that the value is added to the current frame number. It can be used for playing through synth sounds manually.
 
 \includegraphics[width=1cm]{tip}TIP!
 \begin{itemize}
-        \item \textit{Since a synth sound contains 16 (\$10) waves, issuing the command \textsc{F10} will in effect jump to the next synth sound.}
+        \item \textit{Since a synth sound contains 16 (\$10) waves, issuing the command \textsc{F10} jumps to the next synth sound.}
 	%\marginpar{\includegraphics[width=1cm]{tip}TIP!}
 	\end{itemize}
 
@@ -172,19 +169,20 @@ This will result in a slide that starts with C-4, bends to F-4, and then quickly
 
 \subsection{L in Tables}
 
-The L command also works in the left table command column, using the transpose column to set target note relative to the base note.
+The L command may be used in the left table command column. The transpose column will then set target note relative to the base note.
 
 \begin{figure}[htbp]
 	\begin{center}
 		\fbox{\includegraphics{table-slide}}
+		\caption{Table Slide}
 	\end{center}
 \end{figure}
 
-Regular transposes and slides are added together independently. In the above example, step 0 transposes one octave up. In step 1, the L command starts sliding one octave down while keeping the transpose from step 0 unchanged. In step 2, the L command is allowed to play out while the transpose stays one octave up. After some time, L will stop one octave down, canceling out the transpose and returning to the base note.
+Transposes and slides are added together independently. In the above example, step 0 transposes one octave up. In step 1, the L command starts sliding one octave down while keeping the transpose from step 0 unchanged. In step 2, the L command is allowed to continue while the transpose stays one octave up. After some time, L will stop one octave down, canceling out the transpose and returning to the base note.
 
 \section{M: Master Volume}
 
-This command changes the master output volume. The first digit modifies the left output, the second digit the right. The volume can either be set with an absolute value, or changed by a relative value.
+Changes the master output volume. The first digit modifies the left output, the second digit the right. The volume can either be set with an absolute value, or changed by a relative value.
 
 Values 0-7 are used to specify absolute volumes. Values 8-\$F give the volume a relative change; 8 is no change, 9-\$B increase, \$D-\$F decrease.
 
@@ -226,7 +224,7 @@ Applies S command with the given value every tick.
 
 \section{R: Retrig/Resync}
 
-Retrig plays the latest played note again. The first digit modulates the volume (0=no change, 1-7=increase, 9-\$F=decrease). The second digit sets retrig rate, zero being the fastest and $E the slowest, and $F meaning only retrig once.
+Retrig plays the latest played note again. The first digit modulates the volume (0=no change, 1-7=increase, 9-\$F=decrease). The second digit sets retrig rate, 0 being the fastest and \$E the slowest, and \$F meaning only retrig once.
 
 R8x means resync: With this option, the sound generator restarts at a very high rate. The pulse channels have a special quirk which makes resync slow down the sound, allowing it to go half an octave deeper.
 
@@ -301,7 +299,7 @@ The first digit sets speed, second sets depth.
 Changes waveform.
 
 \subsection{For Wave Instruments:}
-The first digit sets synth sound speed, the second sets synth sound length. 0 = no change. The synth will be restarted if length is changed.
+The first digit sets synth sound speed, the second sets synth sound length. 0 = no change. The synth restarts if length is changed.
 
 \section{Z: RandomiZe}
 
