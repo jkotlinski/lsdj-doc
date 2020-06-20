@@ -291,6 +291,8 @@ Tables are sequences of transposes, commands and amplitude changes which can be 
 
 Tables contain six columns. The first column is the envelope column, used to create custom amplitude envelopes. Next is the transpose column, used to transpose the played note by a number of semitones. The other columns are command columns like the one in the phrase screen.
 
+For noise instruments, the transpose is added to the current noise shape value. As an example, \$FF would decrease the total noise shape value by one (as opposed to the \textsc{sff} command, which would subtract one from each digit).
+
 The default table speed of one tick per step can be changed using the G command. To view different tables, press \textsc{b+cursor}.
 
 \includegraphics[width=0.8cm]{tip}TIP!
