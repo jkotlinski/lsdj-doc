@@ -1,6 +1,8 @@
 \chapter{SRAM Memory Map}
 
-\section{Bank 0}
+\section{Bank Layouts}
+
+\subsection{Bank 0}
 
 \begin{description}
     \item[A000-AFEF] phrase notes
@@ -15,7 +17,7 @@
     \item[BE7A-BFB9] instrument names
 \end{description}
 
-\section{Bank 1}
+\subsection{Bank 1}
 
 \begin{description}
     \item[A000-A01F] empty
@@ -55,14 +57,14 @@
     \item[BFC6-BFC9] last used instrument/channel
 \end{description}
 
-\section{Bank 2}
+\subsection{Bank 2}
 
 \begin{description}
     \item[A000-AFEF] phrase commands
     \item[AFF0-BFDF] phrase command values
 \end{description}
 
-\section{Bank 3}
+\subsection{Bank 3}
 
 \begin{description}
     \item[A000-AFFF] waves
@@ -71,3 +73,114 @@
     \item[BFF2-BFFE] empty
     \item[BFFF-BFFF] version byte
 \end{description}
+
+\section{Instrument Layouts}
+
+\subsection{Pulse Instrument}
+
+\tablehead{}
+
+\begin{xtabular}{r|r|l|l}
+    Byte & Bits & Content & Value \\
+    \hline
+    0  & 7-0 & 0 & \\
+    1  & 7-0 & \textsc{Adsr 1} 		& \\
+    2  & 7-0 & \textsc{Pu2 Tsp.} 	& \\
+    3  & 6   & \textsc{Length=Unlim} 	& 0=yes, 1=no \\
+       & 5-0 & \textsc{Length} 		& \\
+    4  & 6-0 & \textsc{Sweep} 		& \\
+    5  & 7   & \textsc{Pitch=Step} 	& 0=no, 1=yes \\
+       & 6   & \textsc{Pitch=Drum} 	& 0=no, 1=yes \\
+       & 5   & \textsc{Transpose} 	& 0=on, 1=off \\
+       & 4   & \textsc{Pitch} speed	& 0=fast, 1=tick \\
+       & 3   & \textsc{Table} speed	& 0=tick, 1=step \\
+       & 2-1 & Vibrato shape		& 0=sin, 1=saw, 2=sqr \\
+       & 0   & Vibrato direction	& 0=down, 1=up \\
+    6  & 5   & Table off/on		& 0=off, 1=on \\
+       & 4-0 & Table			& \\
+    7  & 7-6 & \textsc{Wave}		& \\
+       & 5-2 & \textsc{Finetune}	& \\
+       & 1-0 & \textsc{Output}		& \\
+    8  & 3-0 & \textsc{Cmd/Rate}	& \\
+    9  & 7-0 & \textsc{Adsr 2}		& \\
+    10 & 7-0 & \textsc{Adsr 3}		& \\
+\end{xtabular}
+
+\subsection{Wave Instrument}
+
+\begin{xtabular}{r|r|l|l}
+    Byte & Bits & Content & Value \\
+    \hline
+    0  & 7-0 & 1 & \\
+    1  & 6-5 & \textsc{Volume} 		& \\
+    2  & 3-0 & \textsc{Loop Pos} 	& \\
+    3  & 7-0 & \textsc{Wave} 		& \\
+       & 7-4 & \textsc{Synth} 		& \\
+    4  & -   & - & \\
+    5  & 7   & \textsc{Pitch=Step} 	& 0=no, 1=yes \\
+       & 6   & \textsc{Pitch=Drum} 	& 0=no, 1=yes \\
+       & 5   & \textsc{Transpose} 	& 0=on, 1=off \\
+       & 4   & \textsc{Pitch} speed	& 0=fast, 1=tick \\
+       & 3   & \textsc{Table} speed	& 0=tick, 1=step \\
+       & 2-1 & Vibrato shape		& 0=sin, 1=saw, 2=sqr \\
+       & 0   & Vibrato direction	& 0=down, 1=up \\
+    6  & 5   & Table off/on		& 0=off, 1=on \\
+       & 4-0 & Table			& \\
+    7  & 1-0 & \textsc{Output}		& \\
+    8  & 3-0 & \textsc{Cmd/Rate}	& \\
+    9  & 1-0 & \textsc{Playtype}	& 0=off, 1=once, 2=loop, 3=pingpong \\
+    10 & 3-0 & \textsc{Length}		& \\
+    11 & 7-0 & \textsc{Speed}		& \\
+    12 & 7-3 & \textsc{Finetune}	& \\
+\end{xtabular}
+
+\subsection{Kit Instrument}
+
+\begin{xtabular}{r|r|l|l}
+   Byte & Bits	& Content 		& Value \\
+\hline
+      0	& 7-0 	& 2 			& \\
+      1	& 6-5 	& \textsc{Volume} 	& \\
+      2	& 7   	& \textsc{Loop 1=Atk} 	& 0=no, 1=yes \\
+	& 6   	& \textsc{Speed=0.5x} 	& 0=no, 1=yes \\
+	& 5-0 	& \textsc{Kit} 		& \\
+      3	& 7-0 	& \textsc{Length 1} 	& 0=\textsc{Auto} \\
+      4	& -   	& - 			& \\
+      5	& 7   	& \textsc{Pitch=Step} 	& 0=no, 1=yes \\
+	& 6   	& \textsc{Loop 1} 	& 0=off, 1=on \\
+	& 5   	& \textsc{Loop 2} 	& 0=off, 1=on \\
+	& 4   	& \textsc{Pitch} speed	& 0=fast, 1=tick \\
+	& 3   	& \textsc{Table} speed	& 0=tick, 1=step \\
+	& 2-1 	& Vibrato shape		& 0=sin, 1=saw, 2=sqr \\
+	& 0   	& Vibrato direction	& 0=down, 1=up \\
+      6	& 5   	& Table off/on		& 0=off, 1=on \\
+	& 4-0 	& Table			& \\
+      7	& 1-0 	& \textsc{Output}	& \\
+      8	& 7-0 	& \textsc{Finetune}	& \\
+      9	& 7   	& \textsc{Loop 2=Atk} 	& 0=no, 1=yes \\
+	& 5-0 	& \textsc{Kit} 		& \\
+     10	& 7-0 	& \textsc{Dist} 	& \$d0-\$d3=\textsc{clip, shape, shap2, wrap} \\
+     11	& 7-0 	& \textsc{Length 2} 	& 0=\textsc{Auto} \\
+     12	& 7-0 	& \textsc{Offset 1} 	& \\
+     13	& 7-0 	& \textsc{Offset 2} 	& \\
+\end{xtabular}
+
+\subsection{Noise Instrument}
+
+\begin{xtabular}{r|r|l|l}
+   Byte	& Bits	& Content 		& Value \\
+\hline
+      0	& 7-0 	& 3 			& \\
+      1 & 7-0 	& \textsc{Adsr 1} 	& \\
+      2 & -   	& -  		 	& \\
+      3 & 6   	& \textsc{Length=Unlim}	& 0=yes, 1=no \\
+        & 5-0 	& \textsc{Length} 	& \\
+      4 & 7-0 	& Last entered note 	& \\
+      5 & 3     & \textsc{Table} speed	& 0=tick, 1=step \\
+      6	& 5   	& Table off/on		& 0=off, 1=on \\
+	& 4-0 	& Table			& \\
+      7 & 1-0 	& \textsc{Output}	& \\
+      8 & 3-0 	& \textsc{Cmd/Rate}	& \\
+      9 & 7-0 	& \textsc{Adsr 2}	& \\
+     10 & 7-0 	& \textsc{Adsr 3}	& \\
+\end{xtabular}
