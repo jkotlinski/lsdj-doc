@@ -1,5 +1,7 @@
 \chapter{SRAM Memory Map}
 
+This chapter is intended for programmers. It contains information about how song data is stored in SRAM. If you use an emulator, SRAM contents are usually stored in a .sav file.
+
 \section{Bank Layouts}
 
 \subsection{Bank 0}
@@ -25,7 +27,7 @@
     \item[A040-A07F] instr alloc table
     \item[A080-A87F] chain phrases
     \item[A880-B07F] chain transposes
-    \item[B080-B47F] instrument parameters
+    \item[B080-B47F] instrument parameters \label{sram-instr-param}
     \item[B480-B67F] table transposes
     \item[B680-B87F] table commands, left column
     \item[B880-BA7F] table command values, left column
@@ -76,13 +78,16 @@
 
 \section{Instrument Layouts}
 
-\subsection{Pulse Instrument}
+Tables \ref{tab:sram-pulse} to \ref{tab:sram-noise} show the SRAM layout of the different instrument types. Each instrument takes up 16 bytes in the instrument parameter area in \nameref{sram-instr-param}.
 
-\tablehead{}
-
-\begin{xtabular}{r|r|l|l}
+\begin{table}
+	\begin{center}
+	\caption{Pulse Instrument SRAM Layout.}
+	\label{tab:sram-pulse}
+	\begin{tabular}{r|r|l|l}
+		\toprule
     Byte & Bits & Content & Value \\
-    \hline
+    \midrule
     0  & 7-0 & 0 & \\
     1  & 7-0 & \textsc{Adsr 1} 		& \\
     2  & 7-0 & \textsc{Pu2 Tsp.} 	& \\
@@ -104,13 +109,18 @@
     8  & 3-0 & \textsc{Cmd/Rate}	& \\
     9  & 7-0 & \textsc{Adsr 2}		& \\
     10 & 7-0 & \textsc{Adsr 3}		& \\
-\end{xtabular}
+    \bottomrule
+	\end{tabular}
+	\end{center}
+\end{table}
 
-\subsection{Wave Instrument}
-
-\begin{xtabular}{r|r|l|l}
+\begin{table}
+	\begin{center}
+		\caption{Wave Instrument SRAM Layout.}
+		\begin{tabular}{r|r|l|l}
+			\toprule
     Byte & Bits & Content & Value \\
-    \hline
+    \midrule
     0  & 7-0 & 1 & \\
     1  & 6-5 & \textsc{Volume} 		& \\
     2  & 3-0 & \textsc{Loop Pos} 	& \\
@@ -132,13 +142,18 @@
     10 & 3-0 & \textsc{Length}		& \\
     11 & 7-0 & \textsc{Speed}		& \\
     12 & 7-3 & \textsc{Finetune}	& \\
-\end{xtabular}
+    \bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
 
-\subsection{Kit Instrument}
-
-\begin{xtabular}{r|r|l|l}
+\begin{table}
+	\begin{center}
+		\caption{Kit Instrument SRAM Layout.}
+		\begin{tabular}{r|r|l|l}
+			\toprule
    Byte & Bits	& Content 		& Value \\
-\hline
+   \midrule
       0	& 7-0 	& 2 			& \\
       1	& 6-5 	& \textsc{Volume} 	& \\
       2	& 7   	& \textsc{Loop 1=Atk} 	& 0=no, 1=yes \\
@@ -163,13 +178,19 @@
      11	& 7-0 	& \textsc{Length 2} 	& 0=\textsc{Auto} \\
      12	& 7-0 	& \textsc{Offset 1} 	& \\
      13	& 7-0 	& \textsc{Offset 2} 	& \\
-\end{xtabular}
+   \bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
 
-\subsection{Noise Instrument}
-
-\begin{xtabular}{r|r|l|l}
+\begin{table}
+	\begin{center}
+		\caption{Noise Instrument SRAM Layout.}
+		\label{tab:sram-noise}
+		\begin{tabular}{r|r|l|l}
+			\toprule
    Byte	& Bits	& Content 		& Value \\
-\hline
+\midrule
       0	& 7-0 	& 3 			& \\
       1 & 7-0 	& \textsc{Adsr 1} 	& \\
       2 & -   	& -  		 	& \\
@@ -183,4 +204,7 @@
       8 & 3-0 	& \textsc{Cmd/Rate}	& \\
       9 & 7-0 	& \textsc{Adsr 2}	& \\
      10 & 7-0 	& \textsc{Adsr 3}	& \\
-\end{xtabular}
+     \bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
