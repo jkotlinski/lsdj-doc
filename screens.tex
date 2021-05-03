@@ -70,27 +70,19 @@ To start or stop playing all channels in the song screen, press \textsc{start}. 
 \end{itemize}
 
 \section{Chain Screen}
-Chains are lists of phrases to be played in order. A chain can represent for example a melody or a bass line.
-
-The chain screen contains two columns. The first column contains the list of phrases
-to play, while the second column transposes the phrase to the left.
+A chain holds a list of phrases to be played back. It can represent for example a melody or a bass line. Each phrase has an optional transpose.
 
 \begin{figure}[hbtp]
 \centering
 \fbox{ \includegraphics{chainexample} }
-\caption{Chain Screen}
-\label{fig:chainexample}
+	\caption{This chain plays phrase 3 transposed by 5 semitones, followed by phrases 4-6 without transpose.}
 \end{figure}
-
-Example:
-The chain in figure~\ref{fig:chainexample} would play phrase 3, adding 5 semitones to each note, and then play each of the phrases 4, 5, 6 without transposing.
 
 To add a phrase to the chain, move the cursor to an empty step and press \textsc{a}. To
 insert a new phrase, press \textsc{a} twice on an empty step. To edit a phrase, move the cursor to the phrase number
 and press \textsc{select+right}.
 
-When editing a chain, you can go to the chain in a neighboring channel by pressing \textsc{b+left/right}. It is also possible to go to the next or previous chain in the song screen by
-pressing \textsc{b+up/down}.
+While editing a chain, \textsc{B+up/down} jumps to the next or previous chain, and \textsc{B+left/right} jumps to the chain of a neighboring channel.
 
 The different channels all share the same set of chains; that is, no chain is ever locked to a
 particular channel.
