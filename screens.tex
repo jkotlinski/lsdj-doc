@@ -6,10 +6,10 @@ Little Sound Dj has nine screens, laid out in a \begin{math} 5 \times 3 \end{mat
 \begin{figure}[htbp]
 \centering
 \begin{tabular}{|c|c|c|c|c|}
-        \cline{0-4}
-	& \multicolumn{4}{|c|}{ } \\
-	Project & \multicolumn{4}{|c|}{Synth / Wave} \\
-	& \multicolumn{4}{|c|}{ } \\
+	\cline{0-4}
+	\multicolumn{2}{|c|}{} & \multicolumn{2}{|c|}{} & \\
+	\multicolumn{2}{|c|}{Project} & \multicolumn{2}{|c|}{Synth} & Wave \\
+	\multicolumn{2}{|c|}{} & \multicolumn{2}{|c|}{}  &\\
         \cline{0-4}
         & & & & \\
         Song & Chain & Phrase & Instr. & Table \\
@@ -28,17 +28,16 @@ Project screen contains project settings, and groove screen controls sequencer t
 \footnote{There are also three hidden
 screens, not shown on the map: The file, word and help screens. We will get back to these later.}
 
-You will likely spend most time in the middle row, as that is where the composing is done.
+Most time is usually spent in the middle row, as that is where the composing is done.
 
 Move between the screens using \textsc{select+cursor}. Synth and wave screens are overlaid; switch between them by pressing \textsc{select+right}.
 
 \section{Starting and Stopping}
 
-When pressing \textsc{start} in the song screen, Little Sound Dj will always try to play all four
-channels. When pressing \textsc{start} in the other screens, Little Sound Dj will only try to play the
-channel that's indicated in the three-letter field at the right edge of the screen (\textsc{pu1}, \textsc{pu2}, \textsc{wav} or \textsc{noi}).
-
-To start playing all four channels from some other screen than the song screen,
+When pressing \textsc{start} in the song screen, Little Sound Dj plays all four
+channels. When pressing \textsc{start} in other screens, Little Sound Dj plays the
+channel that is being edited.
+To start all four channels from some other screen than the song screen,
 press \textsc{select+start}.
 
 \section{Song Screen}
@@ -56,18 +55,19 @@ is the highest level of the sequencer. This is where you arrange your songs.
 
 The screen contains four columns, one for each channel. The columns contain lists of chains to be played from top to down. Different chains are used for different channels.
 
-To insert a chain, move the cursor to an empty step and press \textsc{a}. If you want to add a new
-chain, press \textsc{a} twice. To edit a chain, move the cursor to the chain number and press
-\textsc{select+right}. To remove a chain, press \textsc{b+a}.
+\subsection{Useful keypresses}
 
-To start or stop playing all channels in the song screen, press \textsc{start}. To instantly re-start all channels in the song screen, press \textsc{select+start}.
-
-\includegraphics[width=0.8cm]{tip}TIP!
-\begin{itemize}
-\item \textit{Pull up down-below chains by pressing \textsc{b+a} on an empty step.}
-\item \textit{\textsc{B+up/down} does page up/down.}
-\item \textit{Add or remove song screen bookmarks by tapping \textsc{b} three times \textsc{(b, b, b)}.}
-\end{itemize}
+\begin{description}
+	\item[\textsc{A}] Insert chain on empty step.
+	\item[\textsc{A,a}] Add new chain.
+	\item[\textsc{Select+right}] Edit chain.
+	\item[\textsc{B+a}] Remove chain. On empty step, pull up down-below chains.
+	\item[\textsc{Start}] Start/stop playing.
+	\item[\textsc{Select+start}] Instant restart.
+	\item[\textsc{Left+start}] Queue row for playback.
+	\item[\textsc{B,b,b}] Mark row.
+	\item[\textsc{B+up/down}] Jump to nearest marked row, or page up/down.
+\end{description}
 
 \section{Chain Screen}
 A chain holds a list of phrases to be played back. It can represent for example a melody or a bass line. Each phrase has an optional transpose.
