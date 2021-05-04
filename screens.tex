@@ -202,12 +202,13 @@ The wave instrument plays back synth sounds generated in the \textsc{synth} scre
 
 \begin{description}
     \item[\textsc{volume}] Set amplitude (0=0\%, 1=25\%, 2=50\%, 3=100\%) and left/right output.
-    \item[\textsc{finetune}] Detunes the sound.
+    \item[\textsc{finetune}] Detune the sound.
+    \item[\textsc{wave}] Select the wave to play back. Waves are edited in the \textsc{wave} screen. When \textsc{play} is set to some other value than \textsc{manual}, this parameter is replaced by \textsc{synth}.
     \item[\textsc{synth}] Select the synth sound to play back. To edit the synth sound being used, press \textsc{select+up} to go to the \textsc{synth} screen. To use a new synth, tap \textsc{a} twice. To clone the synth, press \textsc{select+(b,a)}.
-    \item[\textsc{play}] How to play back the synth sound: \textsc{manual}, \textsc{once}, \textsc{loop}, or \textsc{pingpong}. With \textsc{manual}, only the first wave of the synth sound is played, allowing you to step through the sound manually using the \textsc{f} command.
-	\item[\textsc{speed}] Set how fast the synth sound should be played back.
-	\item[\textsc{length}] Set the length of the synth sound.
-	\item[\textsc{loop pos}] Set the loop point of the synth sound.
+    \item[\textsc{play}] How to play back synth sounds: \textsc{manual}, \textsc{once}, \textsc{loop}, or \textsc{pingpong}. With \textsc{manual}, only a single wave is played. To play through a synth sound in \textsc{manual} mode, use the \textsc{f} command to step through its waves.
+	\item[\textsc{speed}] How fast the synth sound should be played back.
+	\item[\textsc{length}] Controls the length of the synth sound.
+	\item[\textsc{loop pos}] Sets the loop point of the synth sound.
 \end{description}
 
 \subsection{Kit Instrument Parameters}
