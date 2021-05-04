@@ -250,11 +250,7 @@ The wave instrument plays back synth sounds generated in the \textsc{synth} scre
 
 \begin{description}
 	\item[\textsc{adsr}] See description of pulse ADSR (\ref{pulse-adsr}).
-	\item[\textsc{shape}] Noise generator control. The first digit changes pitch by octave, the second digit divides the frequency. Set the second digit to 0-7 for periodic noise, 8-\$F for random noise.
-        An in-depth technical explanation of the noise generator can be found in \href{https://www.devrs.com/gb/files/hosted/GBSOUND.txt}{gbsound.txt}.
-	\item[\textsc{s mode}] When set to \textsc{free}, noise changing commands can randomly\footnotemark mute the sound. When set to \textsc{stable}, commands are limited so that sound will never be muted by accident.
-\footnotetext{There is a 0.4\% risk that the sound gets muted when a shape that ends with digit 8-F
-        is changed so that it ends with digit 0-7.}
+	\item[\textsc{pitch}] When set to \textsc{free}, pitch changes can randomly mute the sound. \textsc{Safe} avoids random mutes by restarting sound after any pitch change.
 \end{description}
 
 \subsection{Speech Instrument Parameters}
@@ -504,7 +500,7 @@ Generally, this is only useful if the cartridge got scrambled.
 
 The file screen (figure~\ref{fig:file}) is entered by pressing the \textsc{load/save file} button in the project screen. It is used for saving the song you are working on to the storage memory. It can also be used to load songs from the storage memory to the work memory. The file screen allows you to keep up to 32 songs on one cartridge.
 
-Note: The file screen is only available for cartridges that have 512 Mbit SRAM or more.
+The file screen is only available for cartridges that have 64 kb SRAM or more.
 
 \begin{description}
 	\item[\textsc{file}] Shows the file name of the song you are working on. The exclamation mark (\textsc{!}) indicates when changes have been made to a song.
@@ -514,12 +510,12 @@ Note: The file screen is only available for cartridges that have 512 Mbit SRAM o
 	\item[\textsc{blocks used}] Shows how much of the storage memory that is used. One block equals 512 bytes. The digits on the bottom are hexadecimal, meaning there is a total of \$BF * 512 = 97,792 available bytes.
 \end{description}
 
-To cancel an operation in this screen, simply press \textsc{b}.
+Press \textsc{b} to return to the project screen.
 
 \begin{figure}[hbtp]
-\includegraphics[width=0.8cm]{tip}TIP!
-\begin{itemize}
-        \item \textit{There is a useful file manager application available at} \url{https://littlesounddj.com/lsd/latest/lsd-manager/}.
+	\includegraphics[width=0.8cm]{tip}TIP!
+	\begin{itemize}
+		\item \textit{To manage songs, use the lsdpatcher program.} \url{https://littlesounddj.com/lsd/latest/lsd-patcher/}
 	\end{itemize}
 \end{figure}
 
@@ -529,12 +525,12 @@ The song list presents song name, version number and file size. When saving, the
 
 \includegraphics[width=0.84cm]{tip}TIP!
 \begin{itemize}
-    \item{While in the song list, it is possible to press \textsc{select+a} to load a song without switching to the song screen, and \textsc{start} to start/stop songs. In this way, you can load and play songs without jumping back and forth between screens. This can be handy if you are playing a live show with prepared tracks and want fewer things to think about.}
+    \item{While in the song list, press \textsc{select+a} to load a song without switching to the song screen, and \textsc{start} to start/stop songs. In this way, you can load and play songs without jumping back and forth between screens. This can be handy if you are playing a live show with prepared tracks and want fewer things to think about.}
 \end{itemize}
 
 \section{Border Information}
 
-Various useful data is displayed in the screen border.
+Various useful information is displayed in the screen border.
 
 \begin{figure}[htpb]
 	\begin{center}
