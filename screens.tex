@@ -108,17 +108,17 @@ The command column is used to add effects. For example, the K command kills the 
 \label{fig:instr2}
 \end{figure}
 
-There are five types of instruments available:
+There are five instrument types:
 
 \begin{description}
 \item[\textsc{pulse}] Makes pulse waves. Used in pulse channels 1 and 2.
-\item[\textsc{wave}] Plays back waves synthesized using the synth screen. Used in the wave channel.
-\item[\textsc{kit}] Plays back samples from ROM. Used in the wave channel.
-\item[\textsc{noise}] Makes filtered noise. Used in the noise channel.
-\item[\textsc{speech}] This instrument is locked to instrument number \$40, and is used for speech programming. Learn all about it in chapter \ref{speech-chapter}!
+\item[\textsc{wave}] Plays waves from the synth and wave screens. Used in the wave channel.
+\item[\textsc{kit}] Plays samples from ROM. Used in the wave channel.
+\item[\textsc{noise}] Makes pitched 7-bit or 15-bit noise. Used in the noise channel.
+\item[\textsc{speech}] Instrument 40 is for speech and is used in the wave channel. Read more about speech in chapter \ref{speech-chapter}.
 \end{description}
 
-You can change the instrument type by going to the type row and pressing \textsc{a+cursor}.
+Change instrument type by pressing \textsc{a+cursor} on the \textsc{type} field.
 
 Remember that instruments don't automatically play in the right channel. For example, if you want to use a kit instrument to play drum samples, do the following:
 
@@ -132,12 +132,6 @@ Remember that instruments don't automatically play in the right channel. For exa
 \item	Change the instrument type to \textsc{kit}.
 \item	Go back to the phrase screen to start using your new instrument.
 \end{enumerate}
-
-\includegraphics[width=0.8cm]{tip}TIP!
-\begin{itemize}
-	\item \textit{In the instrument screen, press \textsc{select+b} to copy instruments and \textsc{select+a} to paste.}
-%\marginpar{\includegraphics[width=0.8cm]{tip}TIP!}
-\end{itemize}
 
 \subsection{General Instrument Parameters}
 \label{general-instrument-parameters}
