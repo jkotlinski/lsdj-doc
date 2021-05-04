@@ -90,12 +90,11 @@ The note column looks different depending on instrument. Usually it shows note a
 
 The instrument column selects instrument. Press \textsc{select+right} to edit an instrument in the instrument screen.
 
-The command column is used to add effects. For example, the K command kills the sound of the channel. Tap \textsc{A,A} on a command for quick-help on what it does.
+The command column is used to add commands. Each command has a special functionality. For example, the H command hops to next phrase. Tap \textsc{A,A} on any command for quick-help on what it does.
 
 \includegraphics[width=0.8cm]{tip}TIP!
 \begin{itemize}
-    \item \textit{To shorten the length of a phrase, use the H (hop) command.}
-    \item \textit{Notes without instrument change pitch or sample without a retrig.}
+    \item \textit{To change note without retrig, cut the instrument with \textsc{b+a}.}
     \item \textit{Mute kit note columns by pressing \textsc{a+right} until \textsc{off} appears. (Only works for kits with fewer than 15 samples.)}
 \end{itemize}
 
@@ -120,7 +119,7 @@ There are five instrument types:
 
 Change instrument type by pressing \textsc{a+cursor} on the \textsc{type} field.
 
-Remember that instruments don't automatically play in the right channel. For example, if you want to use a kit instrument to play drum samples, do the following:
+Instruments don't automatically play in a matching channel. It is your job to make sure the instrument type matches the channel you are using. For example, to use the kit instrument, first make sure that you are in the wave channel:
 
 \begin{enumerate}
 \item Go to the song screen, move cursor to the wave column, and insert a new chain by tapping \textsc{a} twice on an empty step.
@@ -133,10 +132,10 @@ Remember that instruments don't automatically play in the right channel. For exa
 \item	Go back to the phrase screen to start using your new instrument.
 \end{enumerate}
 
-\subsection{General Instrument Parameters}
+\subsection{Instrument Parameters}
 \label{general-instrument-parameters}
 
-These parameters are used in most instrument types. Tap \textsc{A,A} on any parameter for quick-help on what the parameter does.
+These parameters are used in most instrument types:
 
 \begin{description}
 	\item[\textsc{name}] Tap \textsc{a} to name the instrument. Useful for keeping instruments organized. When selecting instrument in phrase screen, this name is shown in the border.
@@ -151,6 +150,11 @@ These parameters are used in most instrument types. Tap \textsc{A,A} on any para
     \item[\textsc{table}] Selects a table to run when playing notes. To edit the table, press \textsc{select+right}. To create a new table, press \textsc{a,a}. To clone the table, press \textsc{select+(b,a)}.
         Changing \textsc{play} to \textsc{step} makes Little Sound Dj step through the table, advancing one step every time the instrument is triggered.
 \end{description}
+
+\includegraphics[width=0.8cm]{tip}TIP!
+\begin{itemize}
+	\item \textit{In the instrument screen, tap \textsc{A,A} on any parameter for quick-help on what it does.}
+\end{itemize}
 
 \subsection{Pulse Instrument Parameters}
 \label{detune}
