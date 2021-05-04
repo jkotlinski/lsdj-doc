@@ -136,11 +136,11 @@ hexadecimal digits\ldots
 \end{figure}
 
 Note that the hexadecimal and decimal values are really equal; just the representations differ.
-The reason to use the hexadecimal system here is to save screen space; with hexadecimal
+The main reason to use hexadecimal is to save screen space; with hexadecimal
 numbers, it is possible to represent every byte value using no more than two digits. (The
-value range is 0 to 255 -- that is, \$0 to \$FF.)
+byte value range is 0 to 255 -- that is, \$0 to \$FF.)
 
-Representing negative numbers with two digits only can be a problem. In Little Sound Dj,
+Representing negative numbers with two digits only can be tricky. In Little Sound Dj,
 the numbers are wrapping. That means, when subtracting one from the smallest possible
 number (\$0), it will jump to the highest possible value (\$FF). So \$FF can represent -1 as well as 255, depending on the situation.
 
