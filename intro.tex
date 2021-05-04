@@ -1,34 +1,4 @@
-\chapter{Introduction}
-\section{Hi!}
-First of all, thanks for trying out Little Sound Dj!
-
-A lot of effort has been put into making this program as powerful and fast-worked
-as possible. If you don't have previous experience from similar ``tracker"-like
-music editors, the amount of new concepts may seem a bit overwhelming at first.
-Please, try not to stress about it. Learn step by step, keep it fun and progress
-at your own pace. Within days, you should know enough about the
-program to make your own first songs.
-
-This manual is mostly written as an absolute beginners guide, but also as a reference
-that covers everything in the program. However, there still
-is a lot of information that would not fit into a manual like this. I highly recommend
-checking out the user-maintained Wiki site at \url{http://wiki.littlesounddj.com} -
-it contains material like tutorials, tips and tricks, and
-hardware related DIY projects. Also, the Facebook group
-at \url{https://www.facebook.com/groups/LittleSoundDJ/} is useful for getting in touch
-with other users.
-If you have questions, ideas or bug reports, please e-mail
-\href{mailto:info@littlesounddj.com}{info@littlesounddj.com}.
-
-Happy tracking!
-
-\textit{/Johan}
-
-\section{Important Notice}
-
-To prevent losing your songs, avoid using the program with low batteries.
-Low battery level is indicated by the red light on your Game Boy
-becoming faint, or the screen becoming dim.
+\chapter{Getting Started}
 
 \section{Game Boy Sound}
 The Game Boy sound chip has four channels, each with 4-bit resolution.
@@ -88,7 +58,7 @@ The song, chain and phrase screens are used for sequencing, and work together in
 fashion.  The song contains chains, each chain contains phrases, and each phrase contains notes.
 They are followed by the instrument and table screens, which are used to create sounds.
 
-To move between the screens, press D-pad while holding select.
+To move between the screens, press \textsc{select+cursor}.
 
 \section{Making Your First Sounds}
 Navigate to the song screen, and move the cursor to the \textsc{pu1} column. Tap the \textsc{a} button,
@@ -124,8 +94,8 @@ screen by pressing \textsc{select+right}.
 \end{figure}
 
 In the instrument screen, we can make the sound a little bit more interesting.
-Try changing the \textsc{adsr} and \textsc{wave} fields by moving the cursor there and pressing \textsc{a+left/right}.
-As an example, setting the \textsc{adsr} setting to \texttt{A3} should make the sound more bouncy.
+Try changing the \textsc{env.} and \textsc{wave} fields by moving the cursor there and pressing \textsc{a+left/right}.
+As an example, changing the \textsc{env.} setting to \texttt{83} should make the sound shorter.
 Press \textsc{start} again to hear the changes as you make them!
 
 The \textsc{type} field sets the instrument type. Instrument types are specific for
@@ -142,25 +112,9 @@ you entered notes before.
 
 To create new chains and phrases, move the cursor to an empty step in song or chain screen and tap \textsc{a} twice.
 
-\section{Initial Troubleshooting}
-
-Does your cartridge not start, crash, or act strange in other ways? Here are some things to try.
-
-\begin{itemize}
-\item Clean cartridge pins using a cotton swab and alcohol.
-\item Re-insert the cartridge a couple of times to remove oxide.
-\item Make sure that the cartridge is firmly plugged in. Sometimes it can help to put a piece of tape on the cartridge to give it a snug fit.
-\item Replace batteries with fresh ones.
-\item Do a full reset of the cartridge memory. This is done by pressing \textsc{select+a+b} on the \textsc{load/save file} button in project screen.
-\item Certain Game Boy Advance/Nintendo DS cartridges do not work with Little Sound Dj. If you have problems with such a cartridge, try one of the Little Sound Dj builds named ``Goomba''.
-\item Search for help on the Little Sound Dj Wiki (\url{http://wiki.littlesounddj.com}) or ask in the Facebook group.
-\end{itemize}
-
 \section{Hexadecimal Number System}
 
-Before moving on to the next chapter, now is a good time to get introduced with the hexadecimal number system that Little Sound Dj uses for representing values.
-
-The hexadecimal number system works just the same way as the traditional decimal number system. The only difference is that it's base is 16 instead of 10. This means it consists of 16 unique symbols: the digits 0 to 9, followed by the letters A to F. For clarity, this manual will mark hexadecimal values with a dollar sign.
+Little Sound Dj uses hexadecimal numbers. While the usual decimal number system uses ten digits, 0-9, hexadecimal has 16 unique symbols: the digits 0 to 9, followed by the letters A to F. For clarity, this manual will mark hexadecimal values with a \$ sign.
 As an example, let's print a table of numbers -- first with decimal digits, then with
 hexadecimal digits\ldots
 
@@ -191,3 +145,17 @@ the numbers are wrapping. That means, when subtracting one from the smallest pos
 number (\$0), it will jump to the highest possible value (\$FF). So \$FF can represent -1 as well as 255, depending on the situation.
 
 If this does not make sense -- please don't worry too much -- it will become clear as you spend time with the program.
+
+\section{Initial Troubleshooting}
+
+Does your cartridge not start, crash, or act strange in other ways? Here are some things to try.
+
+\begin{itemize}
+	\item To avoid losing songs, always use fresh batteries. Replace as soon as the red light on your Game Boy gets faint, or the screen gets dim.
+	\item Clean cartridge pins using a cotton swab and alcohol.
+	\item Re-insert the cartridge a couple of times to remove oxide.
+	\item Make sure that the cartridge is firmly plugged in. Sometimes it can help to put a piece of tape on the cartridge to give it a snug fit.
+	\item Do a full reset of the cartridge memory. This is done by pressing \textsc{select+a+b} on the \textsc{load/save file} button in project screen.
+	\item Certain Game Boy Advance/Nintendo DS cartridges do not work with Little Sound Dj. If you have problems with such a cartridge, try one of the Little Sound Dj builds named ``Goomba''.
+	\item Search for help on the Little Sound Dj Wiki (\url{http://wiki.littlesounddj.com}) or ask in the Facebook group.
+\end{itemize}
