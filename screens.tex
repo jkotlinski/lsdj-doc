@@ -49,8 +49,8 @@ press \textsc{select+start}.
 %\label{fig:song}
 \end{figure}
 
-The song screen is the highest level of the sequencer. This is where you arrange songs.
-It has four columns, one for each channel. The columns contain lists of chains to be played top-down. Different chains are used for different channels.
+The song screen is the highest level of the sequencer. This is where songs are arranged.
+It has four columns, one for each channel. The columns contain lists of chains to be played top-down.
 
 A list of key presses can be found in the help screen.
 
@@ -165,16 +165,15 @@ These parameters are used in most instrument types.
 
 \label{pulse-adsr}
 \begin{description}
-	\item[\textsc{adsr}] Three amplitude control values. For each value, first digit sets amplitude, and the second digit sets the speed to rise or fall to the next amplitude. Speed 1 is fast, 7 is slow, 0 means hold. As an example, \textsc{adsr} 31F7A0 creates an envelope 
- with fast attack from amplitude 3 to F, slow decay to A, then infinite sustain, as shown in figure~\ref{fig:adsrexample}.
+	\item[\textsc{env.}] Three amplitude envelope control values. For each value, first digit sets amplitude, and second digit sets the speed to rise or fall to the next amplitude. Speed 1 is fastest, F is slowest, 0 means hold. As an example, \textsc{env.} 32/AD/10 creates an envelope with fast attack from amplitude 3 to A, slow decay to amplitude 1, then infinite sustain, as shown in figure~\ref{fig:adsrexample}.
 	\item[\textsc{wave}] Wave type.
 	\item[\textsc{sweep}] Frequency sweep, useful for bass drum and percussion. The first digit sets time, the second sets pitch increase/decrease. Only works on the first pulse channel. 
 \end{description}
 
 \begin{figure}[hbtp]
 \centering
-\includegraphics[width=10cm]{adsrexample} 
-\caption{Amplitude envelope example. ADSR=31F7A0.}
+\includegraphics[width=7cm,angle=-90]{adsrexample} 
+	\caption{Amplitude envelope example. \textsc{Env.}=32/AD/10.}
 \label{fig:adsrexample}
 \end{figure}
 
