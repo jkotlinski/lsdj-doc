@@ -273,19 +273,17 @@ The default table speed of one tick per step can be changed using the G command.
 \subsection{Envelope Example}
 
 The first digit in the envelope column sets the amplitude; the second digit sets for how many ticks the amplitude lasts.
-When the second digit is F, the envelope will hop to the step in the first digit.
+To create an loop, set the first digit to the step you want to hop to, and the second digit to \textsc{H}.
 
 \begin{figure}[htpb]
 	\begin{center}
 		\fbox{		\includegraphics{table-amp} }
 	\end{center}
-	\caption{Table Envelope Example}
+	\caption{Table Envelope with Tremolo Effect}
 	\label{fig:table-amp}
 \end{figure}
 
-The table in figure~\ref{fig:table-amp} creates an amplitude envelope with short attack and medium sustain.
-
-For pulse and noise instruments, \textsc{adsr} might be more useful than table envelopes, as it gives a smoother sound.
+The table in figure~\ref{fig:table-amp} creates a tremolo effect.
 
 \subsection{Arpeggio Example}
 
@@ -293,16 +291,15 @@ For pulse and noise instruments, \textsc{adsr} might be more useful than table e
 	\begin{center}
 		\fbox{ \includegraphics{table-arp}}
 	\end{center}
-	\caption{Arpeggio Example}
+	\caption{Table Transpose with Major Arpeggio}
 	\label{fig:table-arp}
 \end{figure}
 
-A typical use for tables is to make arpeggios, which is a musical term for playing notes fast enough to sound like a chord. The table in figure~\ref{fig:table-arp} would form a major chord. Shorter arpeggios can also be made using the C command (see \ref{command-chord}).
+A typical use for tables is to make arpeggios, which is a musical term for playing notes fast enough to sound like a chord. The table in figure~\ref{fig:table-arp} would form a major chord. Shorter arpeggios can also be made using the \textsc{c} command (see \ref{command-chord}).
 
 \includegraphics[width=0.8cm]{tip}TIP!
 \begin{itemize}
 	\item \textit{To give an instrument some attack, transpose the first table row a few steps up or down.}
-	\item \textit{The transpose column has special functionality when using \textsc{kit} or \textsc{noise} type instruments. For \textsc{kit}, the transpose column works as a pitch shifter. For \textsc{noise}, the transpose column works like the \textsc{s} (shape) command.}
 \end{itemize}
 
 \section{Groove Screen}
