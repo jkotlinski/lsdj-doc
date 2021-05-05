@@ -137,7 +137,7 @@ These parameters are used in most instrument types:
         Also affects \textsc{p} and \textsc{v} commands when \textsc{pitch} is set to \textsc{tick}.
         0=fastest, F=slowest.
     \item[\textsc{table}] Selects a table to run when playing notes. To edit the table, press \textsc{select+right}. To create a new table, press \textsc{a,a}. To clone the table, press \textsc{select+(b,a)}.
-        Changing \textsc{play} to \textsc{step} makes Little Sound Dj step through the table, advancing one step every time the instrument is triggered.
+        Changing \textsc{tick} to \textsc{step} makes Little Sound Dj step through the table, advancing one step every time the instrument is triggered.
 \end{description}
 
 \includegraphics[width=0.8cm]{tip}TIP!
@@ -215,7 +215,7 @@ The wave instrument plays back synth sounds generated in the \textsc{synth} scre
     \item[\textsc{volume}] Set amplitude (0=0\%, 1=25\%, 2=50\%, 3=100\%) and output (left/right/both/off).
 	\item[\textsc{finetune}] Pitch shift.
 	\item[\textsc{offset}] Set the start loop point. If \textsc{loop} is \textsc{off}, this value can be used for skipping the initial part of a sound.
-	\item[\textsc{len}] Sound length. \textsc{Aut} plays the sample to its end.
+	\item[\textsc{len}] Sound length. \textsc{All} plays the sample to its end.
 	\item[\textsc{loop}] Loop control. \textsc{Off}=don't loop, \textsc{on}=loop sound and start playing from \textsc{offset}, \textsc{atk}=loop sample and start playing from the beginning.
 	\item[\textsc{speed}] Full speed or half speed.
 	\item[\textsc{clip}] Selects what to do when the signal overshoots while mixing two kits. \textsc{Hard} is the default: Hard clamp the signal to the allowed 0-\$F range. \textsc{Soft} attenuates the signal to reduce distortion, giving a tape-like effect. \textsc{Fold} and \textsc{wrap} add digital distortion by folding or wrapping the signal around the 0 and \$F limits. Press \textsc{a+(left, left)} while \textsc{hard} is selected to mix the kits using raw memory contents.
