@@ -111,15 +111,15 @@ Creating drum instruments without using the sampled drum kits can be very useful
 
 \subsection{Pulse Bass Drum}
 
-The easiest way to create a bass drum is by using pulse channel 1. \textsc{Adsr} should have a strong attack and fast decay -- try setting it to \$C1. \textsc{Wave} is typically 50-50 high/low, even though other waves can be used for a more distorted sound. \textsc{Sweep} should have high initial frequency and fast decay; try setting it to \$E3, and play the instrument at note C-6. For a snappier kick, experiment with \textsc{adsr} and \textsc{length} parameters. Set \textsc{transpose} to \textsc{off} to prevent chain transposes from changing the pitch.
+The easiest way to create a bass drum is by using pulse channel 1. \textsc{Env.} should have a strong attack and fast decay -- try setting it to \$C1. \textsc{Wave} is typically 50-50 high/low, even though other waves can be used for a more distorted sound. \textsc{Sweep} should have high initial frequency and fast decay; try setting it to \$E3, and play the instrument at note C-6. For a snappier kick, experiment with \textsc{env.} and \textsc{length} parameters. Set \textsc{transpose} to \textsc{off} to prevent chain transposes from changing the pitch.
 
 \subsection{Snare Drum}
 
-Use the noise channel for snare drum sounds. The \textsc{adsr} setting should have a strong attack and fast decay -- try setting it to \$D1. Use of the \textsc{length} parameter will make it snappier. Adjust the timbre using \textsc{shape} -- values close to \$EC might prove useful.
+Use the noise channel for snare drum sounds. The \textsc{env.} setting should have a strong attack and fast decay -- try setting it to \$D1. Use of the \textsc{length} parameter will make it snappier. Adjust the timbre using \textsc{shape} -- values close to \$EC might prove useful.
 
 \subsection{Hi-Hats and Cymbals}
 
-Use the noise channel for hi-hats and cymbals. Use a \textsc{shape} value of \$FF for a timbre with high frequency content. Change \textsc{adsr} to get the desired amplitude envelope. For cymbals, a \textsc{shape} value near \$EE will make for a somewhat rougher timbre.
+Use the noise channel for hi-hats and cymbals. Use a \textsc{shape} value of \$FF for a timbre with high frequency content. Change \textsc{env.} to get the desired amplitude envelope. For cymbals, a \textsc{shape} value near \$EE will make for a somewhat rougher timbre.
 
 \subsection{Taking Advantage of Tables}
 

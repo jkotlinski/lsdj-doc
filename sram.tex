@@ -89,7 +89,7 @@ Tables \ref{tab:sram-pulse} to \ref{tab:sram-noise} show the SRAM layout of the 
     Byte & Bits & Content & Value \\
     \midrule
     0  & 7-0 & 0 & \\
-    1  & 7-0 & \textsc{Adsr 1} 		& \\
+    1  & 7-0 & \textsc{Env. 1} 		& \\
     2  & 7-0 & \textsc{Pu2 Tsp.} 	& \\
     3  & 6   & \textsc{Length=Unlim} 	& 0=yes, 1=no \\
        & 5-0 & \textsc{Length} 		& \\
@@ -107,8 +107,8 @@ Tables \ref{tab:sram-pulse} to \ref{tab:sram-noise} show the SRAM layout of the 
        & 5-2 & \textsc{Finetune}	& \\
        & 1-0 & \textsc{Output}		& \\
     8  & 3-0 & \textsc{Cmd/Rate}	& \\
-    9  & 7-0 & \textsc{Adsr 2}		& \\
-    10 & 7-0 & \textsc{Adsr 3}		& \\
+    9  & 7-0 & \textsc{Env. 2}		& \\
+    10 & 7-0 & \textsc{Env. 3}		& \\
     \bottomrule
 	\end{tabular}
 	\end{center}
@@ -192,7 +192,7 @@ Tables \ref{tab:sram-pulse} to \ref{tab:sram-noise} show the SRAM layout of the 
    Byte	& Bits	& Content 		& Value \\
 \midrule
       0	& 7-0 	& 3 			& \\
-      1 & 7-0 	& \textsc{Adsr 1} 	& \\
+      1 & 7-0 	& \textsc{Env. 1} 	& \\
       2 & -   	& -  		 	& \\
       3 & 6   	& \textsc{Length=Unlim}	& 0=yes, 1=no \\
         & 5-0 	& \textsc{Length} 	& \\
@@ -202,8 +202,8 @@ Tables \ref{tab:sram-pulse} to \ref{tab:sram-noise} show the SRAM layout of the 
 	& 4-0 	& Table			& \\
       7 & 1-0 	& \textsc{Output}	& \\
       8 & 3-0 	& \textsc{Cmd/Rate}	& \\
-      9 & 7-0 	& \textsc{Adsr 2}	& \\
-     10 & 7-0 	& \textsc{Adsr 3}	& \\
+      9 & 7-0 	& \textsc{Env. 2}	& \\
+     10 & 7-0 	& \textsc{Env. 3}	& \\
      \bottomrule
 		\end{tabular}
 	\end{center}
