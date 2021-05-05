@@ -47,8 +47,6 @@ sets destination row.
 
 \section{C: Chord}
 
-\subsection{For Pulse and Wave Instruments:}
-
 \label{command-chord}
 Runs an arpeggio that extends the base note with the given semitones. The speed may be slowed down using \textsc{cmd/rate} in instrument screen.
 
@@ -60,10 +58,6 @@ Runs an arpeggio that extends the base note with the given semitones. The speed 
 \item[CCC] plays 0, C, C, 0, C, C, 0, C, C, \ldots
 \item[C00] resets chord
 \end{description}
-
-\subsection{For Noise Instruments:}
-
-Applies S command with the given value every second tick.
 
 \section{D: Delay}
 
@@ -271,8 +265,9 @@ lsdj\_bpm = (desired\_bpm \times ticks\_per\_step)/{6}
 
 \section{V: Vibrato}
 
-Adds vibrato. Not available for noise instruments. The vibrato speed and shape depends on the instrument's \textsc{pitch} setting.
-The first digit sets speed, second sets depth.
+Adds vibrato. The first digit sets speed, second sets depth.
+
+The vibrato speed and shape depends on the instrument's \textsc{pitch} setting. When \textsc{pitch} is set to \textsc{tick}, the vibrato is synced to the music (assuming a groove with on average 6 ticks/step).
 
 \begin{figure}[hbtp]
     \begin{tabular}{r|r|r|r|r|r|r|r|r}
