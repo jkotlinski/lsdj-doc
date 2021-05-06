@@ -193,11 +193,14 @@ Tables \ref{tab:sram-pulse} to \ref{tab:sram-noise} show the SRAM layout of the 
 \midrule
       0	& 7-0 	& 3 			& \\
       1 & 7-0 	& \textsc{Env. 1} 	& \\
-      2 & -   	& -  		 	& \\
+      2 & 0   	& \textsc{Pitch} 	& 0=free, 1=safe \\
       3 & 6   	& \textsc{Length=Unlim}	& 0=yes, 1=no \\
         & 5-0 	& \textsc{Length} 	& \\
       4 & 7-0 	& Last entered note 	& \\
-      5 & 3     & \textsc{Table} speed	& 0=tick, 1=step \\
+      5 & 5     & \textsc{Transpose} 	& 0=on, 1=off \\
+	& 3     & \textsc{Table} speed	& 0=tick, 1=step \\
+	& 2-1 	& Vibrato shape		& 0=sin, 1=saw, 2=sqr \\
+	& 0   	& Vibrato direction	& 0=down, 1=up \\
       6	& 5   	& Table off/on		& 0=off, 1=on \\
 	& 4-0 	& Table			& \\
       7 & 1-0 	& \textsc{Output}	& \\
