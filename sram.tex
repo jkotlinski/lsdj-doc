@@ -8,13 +8,16 @@ This chapter is intended for programmers. It contains information about how song
 
 \begin{description}
     \item[A000-AFEF] phrase notes
-    \item[AFF0-B02F] bookmarks
-    \item[B030-B08F] empty
+    \item[AFF0-AFFF] bookmarks
+    \item[B000-B08F] empty
     \item[B090-B28F] grooves
-    \item[B290-B68F] song chains
+    \item[B290-B58F] song chains
+    \item[B590-B68F] empty
     \item[B690-B88F] table envelopes
-    \item[B890-BDCF] speech instrument words (\$20*42)
-    \item[BDD0-BE77] speech instrument wordnames
+    \item[B890-BA4F] speech instrument words
+    \item[BA50-BDCF] empty
+    \item[BDD0-BDF9] speech instrument wordnames
+    \item[BDFA-BE77] empty
     \item[BE78-BE79] mem initialized flag (set to "rb" on init)
     \item[BE7A-BFB9] instrument names
 \end{description}
@@ -104,11 +107,11 @@ Tables \ref{tab:sram-pulse} to \ref{tab:sram-noise} show the SRAM layout of the 
     6  & 5   & Table off/on		& 0=off, 1=on \\
        & 4-0 & Table			& \\
     7  & 7-6 & \textsc{Wave}		& \\
-       & 5-2 & \textsc{Finetune}	& \\
        & 1-0 & \textsc{Output}		& \\
     8  & 3-0 & \textsc{Cmd/Rate}	& \\
     9  & 7-0 & \textsc{Env. 2}		& \\
     10 & 7-0 & \textsc{Env. 3}		& \\
+    11 & 7-0 & \textsc{Finetune}	& \\
     \bottomrule
 	\end{tabular}
 	\end{center}
@@ -141,7 +144,7 @@ Tables \ref{tab:sram-pulse} to \ref{tab:sram-noise} show the SRAM layout of the 
     9  & 1-0 & \textsc{Playtype}	& 0=off, 1=once, 2=loop, 3=pingpong \\
     10 & 3-0 & \textsc{Length}		& \\
     11 & 7-0 & \textsc{Speed}		& \\
-    12 & 7-3 & \textsc{Finetune}	& \\
+    12 & 7-0 & \textsc{Finetune}	& \\
     \bottomrule
 		\end{tabular}
 	\end{center}
