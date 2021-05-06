@@ -114,7 +114,7 @@ There are five instrument types:
 \item[\textsc{wave}] Plays waves from the synth and wave screens. Used in the wave channel.
 \item[\textsc{kit}] Plays samples from ROM. Used in the wave channel.
 \item[\textsc{noise}] Makes pitched 7-bit or 15-bit noise. Used in the noise channel.
-\item[\textsc{speech}] Instrument 40 is for speech and is used in the wave channel. Read more about speech in chapter \ref{speech-chapter}.
+\item[\textsc{speech}] Instrument 40 is for speech and is used in the wave channel.
 \end{description}
 
 Change instrument type by pressing \textsc{a+cursor} on the \textsc{type} field.
@@ -242,9 +242,39 @@ The wave instrument plays back synth sounds generated in the \textsc{synth} scre
 	\item[\textsc{pitch}] When set to \textsc{free}, pitch changes can randomly mute the sound. \textsc{Safe} avoids random mutes by restarting sound after any pitch change.
 \end{description}
 
-\subsection{Speech Instrument Parameters}
+\subsection{Speech Instrument}
 
-Read about the speech instrument in chapter \ref{speech-chapter}.
+LSDj has 59 speech sounds called allophones. By combining these sounds, it is possible to create any English word or phrase.
+\footnote{A full list of allophones can be found in appendix~\ref{allophone-chapter}.}
+
+The speech instrument is locked to instrument number \$40 and can only be used in the wave channel. It contains 14 word slots, by default named W-0 to W-D.
+
+\begin{figure}[htpb]
+	\begin{center}
+	\fbox{\includegraphics{speech}}
+	\end{center}
+	\caption{Speech Instrument Screen}
+	\label{fig:speech}
+\end{figure}
+\begin{figure}[htpb]
+	\begin{center}
+	\fbox{\includegraphics{word}}
+	\end{center}
+	\caption{Example Word}
+	\label{fig:word}
+\end{figure}
+
+To edit a word, press \textsc{select+right} to get to the word screen. The left column contains the allophones to be played, the right column sets their duration. The word in figure~\ref{fig:word} is supposed to say ``Little Sound Dj.''
+
+To make the words easy to remember, rename them by tapping A in the speech instrument screen.
+
+\begin{figure}[hbtp]
+	\includegraphics[width=0.84cm]{tip}TIP!
+	\begin{itemize}
+		\item When selecting allophones, care about how they sound, not how they are spelled.
+		\item A sound may be different depending on its position within a word. For example, the K in ``coop'' will sound different from the K's in ``keep'' and ``speak''.
+	\end{itemize}
+\end{figure}
 
 \section{Table Screen}
 
