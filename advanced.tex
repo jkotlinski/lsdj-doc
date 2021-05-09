@@ -144,3 +144,21 @@ Use the noise channel for hi-hats and cymbals. Use a phrase note value around 38
 \subsection{Wave Bass Drum}
 
 For the best sounding bass drum, use the synthesizer in the wave channel. Set the \textsc{pitch} to \textsc{drum} by pressing \textsc{a+up}, and set \textsc{transp.} to \textsc{off}. On the synth screen, choose the triangle signal, and set \textsc{volume} to 30. Set a table for the instrument. On step 0 of the table, use a fast P command such as C0. On line 1, put 80 in the \textsc{tsp} column and use an L command with a value such as 30. This will transpose the bass drum to the lowest possible note without wrapping to a higher pitch.  Feel free to experiment with different synth parameters or different values for the P and L commands to shape the sound of the kick, as well as playing the instrument at note C-5, C-6, or above. (See figure~\ref{fig:wavekick}.) The P+L technique also works fine in pulse channel, preferably in combination with the R80 command which lowers pulse sounds by half an octave.
+
+\begin{figure}[hbtp]
+	\centering
+	\subfloat[Bass Drum Instrument]{
+		\fbox{\includegraphics{instr-noisekick}}
+	}
+  \qquad
+	\subfloat[Bass Drum Table]{
+	\fbox{\includegraphics{table-noisekick}}
+	}
+
+	\caption{Noise Channel Bass Drum}
+	\label{fig:noisekick}
+\end{figure}
+
+\subsection{Noise Bass Drum}
+
+For a bass drum in the noise channel, \textsc{Env} should have a strong attack and fast decay -- try setting it to F4/81/0, and play the note at C-0. Setting \textsc{Pitch} to \textsc{Safe} can emphasize the lower frequencies of the noise channel and will ensure that the sound always plays correctly. Set \textsc{transpose} to \textsc{off} to prevent chain transposes from changing the pitch. Set a table with a P command such as F4 on line 1, and on line 0, set a \textsc{TSP} value for the initial attack of the pitch, such as 41, which you may tweak to your liking. (See ~\ref{fig:noisekick}.)
