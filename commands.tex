@@ -66,7 +66,7 @@ Delay the triggering of a note with the given number of ticks.
 \section{E: Amplitude Envelope}
 
 \subsection{For Pulse and Noise Instruments}
-The first value digit sets the initial amplitude (0=min, \$F=max); the second digit sets the release (0,8: no change, 1-7: decrease, 9-\$F: increase).
+The first value digit sets the initial amplitude (0=min, F=max); the second digit sets the release (0,8: no change, 1-7: decrease, 9-F: increase).
 
 \subsection{For Wave Instruments}
 \begin{description}
@@ -83,14 +83,14 @@ The first digit sets \textsc{pu2 tsp.}, the second \textsc{finetune} by 1/32 sem
 See section~\ref{detune}.
 
 \subsection{For Kit Instruments:}
-Modifies the sample position. \$00-\$7F steps forward, \$80-\$FF steps back.
+Modifies the sample position. 00-7F steps forward, 80-FF steps back.
 
 \subsection{For Wave Instruments:}
 Change the wave frame being played on the wave channel. This command is relative, meaning that the value is added to the current frame number. It can be used for playing through synth sounds manually.
 
 \includegraphics[width=0.84cm]{tip}TIP!
 \begin{itemize}
-        \item \textit{Since a synth sound contains 16 (\$10) waves, issuing the command \textsc{F10} jumps to the next synth sound.}
+        \item \textit{Since a synth sound contains 16 (10) waves, issuing the command \textsc{F10} jumps to the next synth sound.}
 	%\marginpar{\includegraphics[width=0.84cm]{tip}TIP!}
 	\end{itemize}
 
@@ -178,7 +178,7 @@ Transposes and slides are added together independently. In the above example, st
 
 Changes the master output volume. The first digit modifies the left output, the second digit the right. The volume can either be set with an absolute value, or changed by a relative value.
 
-Values 0-7 are used to specify absolute volumes. Values 8-\$F give the volume a relative change; 8 is no change, 9-\$B increase, \$D-\$F decrease.
+Values 0-7 are used to specify absolute volumes. Values 8-F give the volume a relative change; 8 is no change, 9-B increase, D-F decrease.
 
 \begin{description}
 \item Examples:
@@ -209,7 +209,7 @@ Example:
 
 \begin{description}
 \item[P02] Pitch change up with speed 2.
-\item[PFE] Pitch change down with speed 2. (\$FE=-2)
+\item[PFE] Pitch change down with speed 2. (FE=-2)
 \end{description}
 
 \subsection{For Noise Instruments:}
@@ -218,7 +218,7 @@ Applies S command with the given value every tick.
 
 \section{R: Retrig/Resync}
 
-Retrig plays the latest played note again. The first digit modulates the pulse and noise volume (0=no change, 1-7=increase, 9-\$F=decrease). The second digit sets retrig rate, 1 being the fastest and \$F the slowest, and 0 meaning only retrig once.
+Retrig plays the latest played note again. The first digit modulates the pulse and noise volume (0=no change, 1-7=increase, 9-F=decrease). The second digit sets retrig rate, 1 being the fastest and F the slowest, and 0 meaning only retrig once.
 
 R8x means resync: With this option, the sound generator restarts at a very high rate. The pulse channels have a special quirk which makes resync slow down the sound, allowing it to go half an octave deeper.
 
@@ -241,7 +241,7 @@ Frequency sweep, useful for bass drums and percussion. The first digit sets time
 
 \subsection{Kit Instruments}
 
-S changes the loop points. The first digit modulates the offset value; the second digit modulates the loop length. (1-7=increase, 9-\$F=decrease.) Used creatively, this command can be very useful for creating a wide range of percussive and timbral effects.
+S changes the loop points. The first digit modulates the offset value; the second digit modulates the loop length. (1-7=increase, 9-F=decrease.) Used creatively, this command can be very useful for creating a wide range of percussive and timbral effects.
 
 \subsection{Noise Instruments}
 

@@ -125,7 +125,7 @@ To create new chains and phrases, move the cursor to an empty step in song or ch
 
 \section{Hexadecimal Number System}
 
-Little Sound Dj uses hexadecimal numbers. While the usual decimal number system uses ten digits, 0-9, hexadecimal has 16 unique symbols: the digits 0 to 9, followed by the letters A to F. For clarity, this manual will mark hexadecimal values with a \$ sign.
+Little Sound Dj uses hexadecimal numbers. While the usual decimal number system uses ten digits, 0-9, hexadecimal has 16 unique symbols: the digits 0 to 9, followed by the letters A to F.
 As an example, let's print a table of numbers -- first with decimal digits, then with
 hexadecimal digits\ldots
 
@@ -135,13 +135,13 @@ hexadecimal digits\ldots
 \begin{tabular}{r|r|r|r|r|r|r|r|r|r|r}
  Decimal & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
 \hline
- Hexadecimal & \$1 & \$2 & \$3 & \$4 & \$5 & \$6 & \$7 & \$8 & \$9 & \$A \\
+ Hexadecimal & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & A \\
 \end{tabular}
 
 \begin{tabular}{r|r|r|r|r|r|r|r|r|r|r}
  Decimal & 11 & 12 & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 \\
 \hline
- Hexadecimal & \$B & \$C & \$D & \$E & \$F & \$10 & \$11 & \$12 & \$13 & \$14  \\
+ Hexadecimal & B & C & D & E & F & 10 & 11 & 12 & 13 & 14  \\
 \end{tabular}
 
 \end{figure}
@@ -149,11 +149,11 @@ hexadecimal digits\ldots
 Note that the hexadecimal and decimal values are really equal; just the representations differ.
 The main reason to use hexadecimal is to save screen space; with hexadecimal
 numbers, it is possible to represent every byte value using no more than two digits. (The
-byte value range is 0 to 255 -- that is, \$0 to \$FF.)
+byte value range is 0 to 255 -- that is, 0 to FF.)
 
 Representing negative numbers with two digits only can be tricky. In Little Sound Dj,
 the numbers are wrapping. That means, when subtracting one from the smallest possible
-number (\$0), it will jump to the highest possible value (\$FF). So \$FF can represent -1 as well as 255, depending on the situation.
+number (0), it will jump to the highest possible value (FF). So FF can represent -1 as well as 255, depending on the situation.
 
 If this does not make sense -- please don't worry too much -- it will become clear as you spend time with the program.
 

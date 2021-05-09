@@ -218,7 +218,7 @@ The wave instrument plays back synth sounds generated in the \textsc{synth} scre
 	\item[\textsc{len}] Sound length. \textsc{All} plays the sample to its end.
 	\item[\textsc{loop}] Loop control. \textsc{Off}=don't loop, \textsc{on}=loop sound and start playing from \textsc{offset}, \textsc{atk}=loop sample and start playing from the beginning.
 	\item[\textsc{speed}] Full speed or half speed.
-	\item[\textsc{clip}] Selects what to do when the signal overshoots while mixing two kits. \textsc{Hard} is the default: Hard clamp the signal to the allowed 0-\$F range. \textsc{Soft} attenuates the signal to reduce distortion, giving a tape-like effect. \textsc{Fold} and \textsc{wrap} add digital distortion by folding or wrapping the signal around the 0 and \$F limits. Press \textsc{a+(left, left)} while \textsc{hard} is selected to mix the kits using raw memory contents.
+	\item[\textsc{clip}] Selects what to do when the signal overshoots while mixing two kits. \textsc{Hard} is the default: Hard clamp the signal to the allowed 0-F range. \textsc{Soft} attenuates the signal to reduce distortion, giving a tape-like effect. \textsc{Fold} and \textsc{wrap} add digital distortion by folding or wrapping the signal around the 0 and F limits. Press \textsc{a+(left, left)} while \textsc{hard} is selected to mix the kits using raw memory contents.
 \end{description}
 
 \includegraphics[width=0.8cm]{tip}TIP!
@@ -247,7 +247,7 @@ The wave instrument plays back synth sounds generated in the \textsc{synth} scre
 LSDj has 59 speech sounds called allophones. By combining these sounds, it is possible to create any English word or phrase.
 \footnote{A full list of allophones can be found in appendix~\ref{allophone-chapter}.}
 
-The speech instrument is locked to instrument number \$40 and can only be used in the wave channel. It contains 14 word slots, by default named W-0 to W-D.
+The speech instrument is locked to instrument number 40 and can only be used in the wave channel. It contains 14 word slots, by default named W-0 to W-D.
 
 \begin{figure}[htpb]
 	\begin{center}
@@ -358,7 +358,7 @@ In the groove screen, select the groove you wish to edit by pressing \textsc{b+c
 \section{Synth Screen}
 
 The synth screen features a soft synthesizer that generates sounds to be played back by the wave instruments.
-Each synth sound uses \$10 waves. Synth sound 0 uses waves \$00-\$0F, synth sound 1 uses waves \$10-\$1F, and so on. The generated synth sounds can be viewed in the wave screen (Section~\ref{wave-screen-section}).
+Each synth sound uses 10 waves. Synth sound 0 uses waves 00-0F, synth sound 1 uses waves 10-1F, and so on. The generated synth sounds can be viewed in the wave screen (Section~\ref{wave-screen-section}).
 
 In total, there are 16 synth sounds. Choose which one to edit by pressing \textsc{b+cursor}.
 
@@ -410,7 +410,7 @@ These settings control the first and last wave of the sound, with a smooth in-be
 \item[\textsc{cutoff}] Filter cutoff frequency.
 \item[\textsc{q}] Resonance control. Boosts the signal around the cutoff frequency, to change how bright or dull the wave sounds.
 \item[\textsc{vshift}] Shifts the signal vertically. See figure \ref{fig:vshift} for examples.
-\item[\textsc{limit}] Limits the signal vertically using the \textsc{dist} mode. 0-\$F lowers the volume, \$10-\$FF allows wrapping and adds interesting overtones to loud signals.
+\item[\textsc{limit}] Limits the signal vertically using the \textsc{dist} mode. 0-F lowers the volume, 10-FF allows wrapping and adds interesting overtones to loud signals.
 \item[\textsc{phase}] Compresses the signal horizontally. See figure \ref{fig:phasing} for examples.
 \end{description}
 
@@ -434,7 +434,7 @@ These settings control the first and last wave of the sound, with a smooth in-be
 \section{Wave Screen}
 \label{wave-screen-section}
 
-In the wave screen, you can view and edit the individual waveforms of the synth sounds. There are 16 synth sounds with 16 waves each. This means that synth sound 0 uses waves \$0-\$F, synth sound 1 uses waves \$10-\$1F, and so on.
+In the wave screen, you can view and edit the individual waveforms of the synth sounds. There are 16 synth sounds with 16 waves each. This means that synth sound 0 uses waves 0-F, synth sound 1 uses waves 10-1F, and so on.
 
 A list of button presses can be found in the help screen.
 
@@ -504,7 +504,7 @@ The file screen is only available for cartridges that have 64 kb SRAM or more.
 	\item[\textsc{load}] Load a song. Press \textsc{a}, select the file to load and press \textsc{a} again.
 	\item[\textsc{save}] Save song. Press \textsc{a}, select the slot to save to and enter the file name.
 	\item[\textsc{erase}] Erase a song. Press \textsc{a}, select the file to erase and press \textsc{a} again.
-	\item[\textsc{blocks used}] Shows how much of the storage memory that is used. One block equals 512 bytes. The digits on the bottom are hexadecimal, meaning there is a total of \$BF * 512 = 97,792 available bytes.
+	\item[\textsc{blocks used}] Shows how much of the storage memory that is used. One block equals 512 bytes. The digits on the bottom are hexadecimal, meaning there is a total of BF * 512 = 97,792 available bytes.
 \end{description}
 
 Press \textsc{b} to return to the project screen.
