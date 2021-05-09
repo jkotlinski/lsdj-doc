@@ -100,10 +100,6 @@ Creating drum instruments without using the sampled drum kits can be very useful
 	\subfloat[Cymbal]{
 		\fbox{\includegraphics{instr-cym}}
 	}
-	\qquad
-	\subfloat[Snare Drum Table]{
-	\fbox{\includegraphics{table-snare}} \label{fig:table-snare}
-	}
 
 	\caption{Synthetic Drum Instruments}
 	\label{fig:instr-examples}
@@ -111,19 +107,17 @@ Creating drum instruments without using the sampled drum kits can be very useful
 
 \subsection{Pulse Bass Drum}
 
-The easiest way to create a bass drum is by using pulse channel 1. \textsc{Env.} should have a strong attack and fast decay -- try setting it to \$C3. \textsc{Wave} is typically 50-50 high/low, even though other waves can be used for a more distorted sound. \textsc{Sweep} should have high initial frequency and fast decay; try setting it to \$63, and play the instrument at note C-6. For a snappier kick, experiment with \textsc{env.} and \textsc{length} parameters. Set \textsc{transpose} to \textsc{off} to prevent chain transposes from changing the pitch.
+The easiest way to create a bass drum is by using pulse channel 1. \textsc{Env.} should have a strong attack and fast decay -- try setting it to \textsc{C3/0/0}. \textsc{Wave} is typically 50-50 high/low, even though other waves can be used for a more distorted sound. \textsc{Sweep} should have high initial frequency and fast decay; try setting it to \$63, and play the instrument at note C-6. For a snappier kick, experiment with \textsc{env.} and \textsc{length} parameters. Set \textsc{transpose} to \textsc{off} to prevent chain transposes from changing the pitch.
 
 \subsection{Snare Drum}
 
-Use the noise channel for snare drum sounds. The \textsc{env.} setting should have a strong attack and fast decay -- try setting it to \$D3. Use of the \textsc{length} parameter will make it snappier. Adjust the timbre by changing note value in phrase screen. Note values around to \$30 should be useful for snares.
+Use the noise channel for snare drum sounds. The \textsc{env.} setting should have a strong attack and fast decay -- try setting it to \textsc{F1/D3/0}.
+Adjust the timbre by changing note value in phrase screen. Note values around \$30 should be useful for snares.
+\textsc{P} and \textsc{v} commands can help making the sound more lively.
 
 \subsection{Hi-Hats and Cymbals}
 
 Use the noise channel for hi-hats and cymbals. Use a phrase note value around \$38 for a timbre with high frequency content. Change instrument \textsc{env.} to get the desired amplitude envelope. For cymbals, lower the notes a bit for a rougher timbre.
-
-\subsection{Taking Advantage of Tables}
-
-For adding that extra punch to snares, use the table transpose column to change the noise shape rapidly. (See figure~\ref{fig:table-snare}.)
 
 \begin{figure}[hbtp]
 	\centering
